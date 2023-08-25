@@ -9,15 +9,17 @@ const TaoTalkApp = ({ Component, pageProps }: AppProps) => {
   return (
     <>
       <Head>
-        <title>TaoTalk</title>
+        <title>JayJay Studio</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="description" content="TaoTalk" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <SessionProvider refetchInterval={5 * 60}>
-        <Layout>
-          <Component {...pageProps} />
-        </Layout>
+        <main className="bg-[#FE5943]">
+          <Layout>
+            <Component {...pageProps} />
+          </Layout>
+        </main>
       </SessionProvider>
     </>
   );

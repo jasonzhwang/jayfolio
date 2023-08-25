@@ -1,7 +1,7 @@
-import { ReactNode } from 'react';
-import Header from './Header';
-import Footer from './Footer/Footer';
-import { useSession } from 'next-auth/react';
+import { ReactNode } from "react";
+import Header from "./Header";
+import Footer from "./Footer/Footer";
+import { useSession } from "next-auth/react";
 
 const Layout: React.FC<{ children: ReactNode }> = ({ children }) => {
   const { data: session } = useSession();
@@ -9,7 +9,7 @@ const Layout: React.FC<{ children: ReactNode }> = ({ children }) => {
     <>
       <Header session={session} />
       <main>{children}</main>
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 };

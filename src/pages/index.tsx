@@ -1,7 +1,3 @@
 export default function Home() {
-  return (
-    <div>
-      <h1>Body</h1>
-    </div>
-  );
+  return <main className="flex">{/* <h1 className="text-sky-500">Body</h1> */}</main>;
 }
