@@ -3,17 +3,17 @@ export default function Home() {
     <>
       <section className="mx-auto flex max-w-[1180px] pb-[86px] pt-[51px]">
         <div className="mx-auto flex flex-col gap-[119px] md:flex-row">
-          <div className="max-w-[314px] flex-col">
-            <p className="text-[12px] text-[#FFCD3C]">DESIGN/DEVELOPMENT/SUPPORT</p>
-            <h1 className="pb-[35px] pt-[60px] font-Nba_Lakers text-[130px] leading-[1] text-white">
+          <div className="flex flex-col">
+            <p className="mx-auto text-[12px] text-[#FFCD3C] md:ml-0">DESIGN/DEVELOPMENT/SUPPORT</p>
+            <h1 className="mx-auto pb-[35px] pt-[60px] font-Nba_Lakers text-[130px] leading-[1] text-white md:ml-0">
               JAYJAY
               <br />
               STUDIO
             </h1>
-            <p className="w-[70%] font-Hemenix text-[16px] text-white">
+            <p className="mx-auto w-full text-center font-Hemenix text-[16px] text-white md:ml-0 md:w-[70%] md:text-left">
               JayJay is an experienced Full Stack Developer making websites with 💛
             </p>
-            <button className="mt-[39px] bg-white px-[16px] py-[12px] text-[#FE5943]">
+            <button className="mx-auto mt-[39px] bg-white px-[16px] py-[12px] text-[#FE5943] md:ml-0">
               Learn more
             </button>
           </div>
@@ -22,7 +22,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="mx-auto flex max-w-[1180px] gap-[19px]">
+      {/* <section className="mx-auto flex max-w-[1180px] gap-[19px]">
         <div className="flex max-w-[280px] flex-col rounded-xl bg-[#F14A38]">
           <div className="mx-auto flex gap-[50px] pb-[26px] pt-[30px]">
             <div>
@@ -157,7 +157,7 @@ export default function Home() {
               <br />
               Developer
             </p>
-            <p className="mx-auto font-Hemenix font-extrabold text-white">Remote</p>
+            <p className="mx-auto font-extrabold text-white font-Hemenix">Remote</p>
           </div>
           <div className="mx-auto flex min-w-[200px] max-w-[250px] flex-col">
             <h3 className="mx-auto font-Hemenix text-[36px] font-black text-white">TaoTech</h3>
@@ -166,7 +166,7 @@ export default function Home() {
               <br />
               Developer
             </p>
-            <p className="mx-auto font-Hemenix font-extrabold text-white">Remote</p>
+            <p className="mx-auto font-extrabold text-white font-Hemenix">Remote</p>
           </div>
           <div className="mx-auto flex min-w-[200px] max-w-[250px] flex-col">
             <h3 className="mx-auto font-Hemenix text-[36px] font-black text-white">TaoTech</h3>
@@ -175,7 +175,7 @@ export default function Home() {
               <br />
               Developer
             </p>
-            <p className="mx-auto font-Hemenix font-extrabold text-white">Remote</p>
+            <p className="mx-auto font-extrabold text-white font-Hemenix">Remote</p>
           </div>
         </div>
       </section>
@@ -218,7 +218,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
     </>
   );
 }

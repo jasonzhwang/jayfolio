@@ -1,15 +1,17 @@
 const Footer = () => {
   return (
     <footer className="flex-col bg-[#FE5943]">
-      <div className="mx-auto max-w-[1210px] translate-y-[100px] rounded-2xl border-[20px] border-[#FE5943]">
-        <div className="flex bg-[#FE5943]">
-          <div className="mx-auto flex gap-[214px] rounded-2xl border-[4px] border-[#F14A38] bg-[#F74E3B] px-[124px] py-[27px]">
+      <div className="mx-auto max-w-[1210px] translate-y-[100px] rounded-2xl border-[15px] border-[#FE5943]">
+        <div className="flex flex-1 justify-center rounded-2xl border-[4px] border-[#F14A38] bg-[#F74E3B] py-[27px]">
+          <div className="flex max-w-[950px] flex-1 flex-col md:flex-row">
             <h2 className="my-auto min-w-[200px] font-Robuck text-[48px] font-light leading-none text-white">
               YOU CAN FIND
-              <br />
+              <span className="hidden md:inline">
+                <br />
+              </span>
               ME HERE:
             </h2>
-            <div className="flex gap-[29px]">
+            <div className="mx-auto flex space-x-[1rem]">
               <img src="./contact.svg" alt="" />
               <img src="./contact.svg" alt="" />
               <img src="./contact.svg" alt="" />
@@ -20,7 +22,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="flex w-full bg-[#F14A38] pb-[21px] pt-[127px]">
-        <div className="mx-auto flex max-w-[1180px] gap-[169px]">
+        <div className="mx-auto flex max-w-[1180px] flex-1 items-center px-[37px]">
           <div className="flex gap-[35px]">
             <img src="./footer-points.svg" alt="" />
             <div className="flex gap-[10px]">
@@ -32,13 +34,15 @@ const Footer = () => {
               </p>
             </div>
           </div>
-          <ul className="my-auto hidden w-0 min-w-[450px] gap-[40px] px-[50px] lg:flex">
-            <li className="font-Hemenix text-white">CASES</li>
-            <li className="font-Hemenix text-white">CAREERS</li>
-            <li className="font-Hemenix text-white">BLOGS</li>
-            <li className="font-Hemenix text-white">ABOUT</li>
-          </ul>
-          <p className="my-auto font-Hemenix text-[12px] text-[#FDED39]">
+          <div className="flex flex-1">
+            <ul className="hidden flex-1 justify-center gap-[40px] px-[50px] lg:flex">
+              <li className="font-Hemenix text-white">CASES</li>
+              <li className="font-Hemenix text-white">CAREERS</li>
+              <li className="font-Hemenix text-white">BLOGS</li>
+              <li className="font-Hemenix text-white">ABOUT</li>
+            </ul>
+          </div>
+          <p className="my-auto ml-auto font-Hemenix text-[12px] text-[#FDED39]">
             2023 | COPYRIGHT
             <br />
             ALL RIGHTS RESERVED
