@@ -9,7 +9,7 @@ const Layout: React.FC<{ children: ReactNode }> = ({ children }) => {
     <>
       <Header session={session} />
       <main>{children}</main>
-      {/* <Footer /> */}
+      <Footer />
     </>
   );
 };

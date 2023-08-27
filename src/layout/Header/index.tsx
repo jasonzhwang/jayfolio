@@ -17,10 +17,10 @@ const Header = ({ session }: { session: Session | null }) => {
       </div>
       <div className="flex flex-1 rounded-r-xl border-4 border-l-0 border-[#F34932] bg-[#FE5943]">
         <ul className="my-auto hidden w-0 min-w-[450px] gap-[40px] px-[50px] lg:flex">
-          <li className="text-white">CASES</li>
-          <li className="text-white">CAREERS</li>
-          <li className="text-white">BLOGS</li>
-          <li className="text-white">ABOUT</li>
+          <li className="font-Hemenix text-white">CASES</li>
+          <li className="font-Hemenix text-white">CAREERS</li>
+          <li className="font-Hemenix text-white">BLOGS</li>
+          <li className="font-Hemenix text-white">ABOUT</li>
         </ul>
         <div className="flex flex-1">
           <div className="my-auto flex-1">

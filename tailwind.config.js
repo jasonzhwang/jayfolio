@@ -10,7 +10,11 @@ module.exports = {
   ],
   theme: {
     extend: {
-      fontFamily: {},
+      fontFamily: {
+        Hemenix: "Hemenix",
+        Nba_Lakers: "Nba_Lakers",
+        Robuck: "Robuck",
+      },
       fontSize: {},
       colors: {
         /* Primary Color*/
