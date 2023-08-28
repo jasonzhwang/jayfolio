@@ -2,8 +2,8 @@ import { Session } from "next-auth";
 
 const Header = ({ session }: { session: Session | null }) => {
   return (
-    <header className="mx-auto flex max-w-[1180px] pt-[45px]">
-      <div className="flex w-full">
+    <header className="mx-[15px] flex pt-[45px] md:mx-[32px]">
+      <div className="mx-auto flex w-full max-w-[1180px]">
         <div className="flex rounded-l-xl border-red-400 bg-[#F3F3F3]">
           <div className="flex h-[99px] rounded-l-xl border-r-4 border-[#FE5943] bg-gray-200">
             <div className="my-auto ml-[17px] mr-[52px]">

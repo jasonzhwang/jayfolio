@@ -1,11 +1,11 @@
 export default function Home() {
   return (
     <>
-      <section className="mx-auto flex max-w-[1180px] pb-[86px] pt-[51px] md:px-[100px]">
-        <div className="mx-auto flex flex-col lg:flex-row">
+      <section className="mx-[15px] flex pb-[86px] pt-[51px] md:mx-[0] md:px-[100px]">
+        <div className="mx-auto flex max-w-[1180px] flex-col lg:flex-row">
           <div className="flex flex-col">
             <p className="mx-auto text-[12px] text-[#FFCD3C] lg:ml-0">DESIGN/DEVELOPMENT/SUPPORT</p>
-            <h1 className="mx-auto pb-[35px] pt-[60px] font-Nba_Lakers text-[130px] leading-[1] text-white lg:ml-0">
+            <h1 className="mx-auto pb-[35px] pt-[60px] font-Nba_Lakers text-[130px] leading-[1] tracking-tight text-white lg:ml-0">
               JAYJAY
               <br />
               STUDIO
