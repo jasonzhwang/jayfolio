@@ -17,9 +17,9 @@ export default function Home() {
               Learn more
             </button>
           </div>
-          <div className="mx-auto flex">
+          {/* <div className="flex mx-auto">
             <img src="./hero.svg" alt="" />
-          </div>
+          </div> */}
         </div>
       </section>
       <section className="mx-auto flex max-w-[1180px] flex-1 flex-col gap-[19px] lg:flex-row">
