@@ -10,16 +10,16 @@ export default function Home() {
               <br />
               STUDIO
             </h1>
-            <p className="mx-auto w-full text-center font-Hemenix text-[16px] text-white lg:ml-0 lg:w-[70%] lg:text-left">
+            <p className="mx-auto w-[80%] text-center font-Hemenix text-[16px] text-white lg:ml-0 lg:w-[70%] lg:text-left">
               JayJay is an experienced Full Stack Developer making websites with 💛
             </p>
             <button className="mx-auto mt-[39px] bg-white px-[16px] py-[12px] text-[#FE5943] lg:ml-0">
               Learn more
             </button>
           </div>
-          {/* <div className="flex mx-auto">
+          <div className="mx-auto flex">
             <img src="./hero.svg" alt="" />
-          </div> */}
+          </div>
         </div>
       </section>
       <section className="mx-auto flex max-w-[1180px] flex-1 flex-col gap-[19px] lg:flex-row">
