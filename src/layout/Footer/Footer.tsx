@@ -4,19 +4,19 @@ const Footer = () => {
       <div className="mx-auto max-w-[1210px] translate-y-[100px] rounded-2xl border-[15px] border-[#FE5943]">
         <div className="flex flex-1 justify-center rounded-2xl border-[4px] border-[#F14A38] bg-[#F74E3B] py-[27px]">
           <div className="flex max-w-[950px] flex-1 flex-col md:flex-row">
-            <h2 className="my-auto min-w-[200px] font-Robuck text-[48px] font-light leading-none text-white">
+            <h2 className="mx-auto my-auto mb-[18px] min-w-[200px] font-Robuck text-[36px] font-light leading-none text-white sm:text-[48px] md:mb-0 md:ml-0">
               YOU CAN FIND
               <span className="hidden md:inline">
                 <br />
               </span>
               ME HERE:
             </h2>
-            <div className="mx-auto flex space-x-[1rem]">
-              <img src="./contact.svg" alt="" />
-              <img src="./contact.svg" alt="" />
-              <img src="./contact.svg" alt="" />
-              <img src="./contact.svg" alt="" />
-              <img src="./contact.svg" alt="" />
+            <div className="mx-auto flex space-x-[0.5rem] sm:space-x-[1.5rem]">
+              <img src="./contact.svg" alt="" className="w-[50px] sm:w-[80px]" />
+              <img src="./contact.svg" alt="" className="w-[50px] sm:w-[80px]" />
+              <img src="./contact.svg" alt="" className="w-[50px] sm:w-[80px]" />
+              <img src="./contact.svg" alt="" className="w-[50px] sm:w-[80px]" />
+              <img src="./contact.svg" alt="" className="w-[50px] sm:w-[80px]" />
             </div>
           </div>
         </div>
@@ -29,7 +29,7 @@ const Footer = () => {
               <div className="flex h-[72px] w-[72px] rounded-[8px] bg-white">
                 <p className="mx-auto mt-[-3px] font-Nba_Lakers text-[64px] text-[#F14A38]">JS</p>
               </div>
-              <p className="my-auto font-Hemenix text-[20px] font-black text-white">
+              <p className="my-auto hidden font-Hemenix text-[20px] font-black text-white sm:block">
                 J A Y J A Y<br />S T U D I O
               </p>
             </div>
