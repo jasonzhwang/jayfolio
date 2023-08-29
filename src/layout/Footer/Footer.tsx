@@ -1,3 +1,7 @@
+import Logo from "@/src/components/Shared/Logo";
+import StudioName from "@/src/components/Shared/StudioName";
+import Menu from "@/src/components/Shared/Menu";
+
 const Footer = () => {
   return (
     <footer className="flex-col bg-[#FE5943]">
@@ -26,21 +30,18 @@ const Footer = () => {
           <div className="flex gap-[35px]">
             <img src="./footer-points.svg" alt="" />
             <div className="flex gap-[10px]">
-              <div className="flex h-[72px] w-[72px] rounded-[8px] bg-white">
-                <p className="mx-auto mt-[-3px] font-Nba_Lakers text-[64px] text-[#F14A38]">JS</p>
-              </div>
-              <p className="my-auto hidden font-Hemenix text-[20px] font-black text-white sm:block">
-                J A Y J A Y<br />S T U D I O
-              </p>
+              <Logo />
+              <StudioName />
             </div>
           </div>
           <div className="flex flex-1">
-            <ul className="hidden flex-1 justify-center gap-[40px] px-[50px] lg:flex">
-              <li className="font-Hemenix text-white">CASES</li>
-              <li className="font-Hemenix text-white">CAREERS</li>
-              <li className="font-Hemenix text-white">BLOGS</li>
-              <li className="font-Hemenix text-white">ABOUT</li>
-            </ul>
+            <Menu />
+            {/* <ul className="hidden flex-1 justify-center gap-[40px] px-[50px] lg:flex">
+              <li className="text-white font-Hemenix">CASES</li>
+              <li className="text-white font-Hemenix">CAREERS</li>
+              <li className="text-white font-Hemenix">BLOGS</li>
+              <li className="text-white font-Hemenix">ABOUT</li>
+            </ul> */}
           </div>
           <p className="my-auto ml-auto font-Hemenix text-[12px] text-[#FDED39]">
             2023 | COPYRIGHT
