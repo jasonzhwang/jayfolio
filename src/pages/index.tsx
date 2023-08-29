@@ -1,7 +1,7 @@
 export default function Home() {
   return (
     <>
-      <section className="mx-[15px] flex pb-[86px] pt-[51px] md:mx-[0] md:px-[100px]">
+      <section className="mx-[15px] flex pb-[86px] pt-[51px] md:mx-[32px] md:px-[100px]">
         <div className="mx-auto flex max-w-[1180px] flex-col lg:flex-row">
           <div className="flex flex-col">
             <p className="mx-auto text-[12px] text-[#FFCD3C] lg:ml-0">DESIGN/DEVELOPMENT/SUPPORT</p>
@@ -22,8 +22,8 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="mx-auto flex max-w-[1180px] flex-1 flex-col gap-[19px] lg:flex-row">
-        <div className="mx-auto flex flex-col gap-[19px] md:flex-row">
+      <section className="mx-[15px] flex flex-1 flex-col gap-[19px] md:mx-[32px] lg:flex-row">
+        <div className="mx-auto flex max-w-[1180px] flex-col gap-[19px] md:flex-row">
           <div className="flex max-w-[280px] flex-col rounded-xl bg-[#F14A38]">
             <div className="mx-auto flex gap-[50px] pb-[26px] pt-[30px]">
               <div>
