@@ -5,7 +5,9 @@ const HeroSection = () => {
     <section className="mx-[15px] flex pb-[86px] pt-[51px] md:mx-[32px] md:px-[100px]">
       <div className="mx-auto flex max-w-[1180px] flex-col lg:flex-row">
         <div className="flex flex-col">
-          <p className="mx-auto text-[12px] text-[#FFCD3C] lg:ml-0">DESIGN/DEVELOPMENT/SUPPORT</p>
+          <p className="mx-auto text-[12px] text-[#FFCD3C] lg:ml-0">
+            DESIGN&nbsp;&nbsp;/&nbsp;&nbsp;DEVELOPMENT&nbsp;&nbsp;/&nbsp;&nbsp;SUPPORT
+          </p>
           <h1 className="mx-auto pb-[35px] pt-[60px] font-Nba_Lakers text-[130px] leading-[1] tracking-tight text-white lg:ml-0">
             JAYJAY
             <br />
@@ -18,7 +20,7 @@ const HeroSection = () => {
             Learn more
           </button>
         </div>
-        <div className="mx-auto flex">
+        <div className="mx-auto flex h-[500px]">
           <img src="./hero.svg" alt="" />
         </div>
       </div>

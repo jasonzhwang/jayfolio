@@ -14,20 +14,24 @@ const Header = ({ session }: { session: Session | null }) => {
           <div className="mr-[-37px] -translate-x-1/2 translate-y-1/2">
             <img src="/jslogo.svg" className="-translate-y-1/2" />
           </div>
-          <img src="/logositename.svg" className="hidden sm:mx-[18px] sm:block" />
+          <img src="/logositename.svg" className="hidden sm:mx-[18px] md:block" />
           <div className="w-[18px] lg:w-0"></div>
         </div>
         <div className="flex flex-1 rounded-r-xl border-4 border-l-0 border-[#F34932] bg-[#FE5943]">
           <Menu />
           <div className="flex flex-1">
-            <div className="my-auto flex-1">
-              <img
-                src="/socialmedias.svg"
-                alt=""
-                className="mx-auto hidden min-w-[130px] px-[16px] sm:block"
-              />
+            <div className="my-auto hidden flex-1 justify-center gap-[10px] px-[16px] sm:flex">
+              <div className="flex h-[50px] w-[50px] rounded-full bg-[#F14A38]">
+                <img src="./linkedin.svg" className="mx-auto my-auto h-[20px]" />
+              </div>
+              <div className="flex h-[50px] w-[50px] rounded-full bg-[#F14A38]">
+                <img src="./github.svg" className="mx-auto my-auto h-[20px]" />
+              </div>
+              <div className="flex h-[50px] w-[50px] rounded-full bg-[#F14A38]">
+                <img src="./figma.svg" className="mx-auto my-auto h-[20px]" />
+              </div>
             </div>
-            <div className="flex gap-[5px] pr-[50px]">
+            <div className="ml-auto flex gap-[5px] pr-[50px]">
               <span className="my-auto px-[16px] py-[12px] text-xl font-black text-white">
                 LOGIN
               </span>

@@ -3,10 +3,21 @@ import React from "react";
 const CaseSection = () => {
   return (
     <section className="mx-[15px] flex flex-col md:mx-[32px]">
-      <div className="mx-auto mb-[50px] mt-[72px] rounded-lg bg-[#F14B36]">
-        <button className="px-[16px] py-[12px] font-Hemenix font-[16px] text-white">TODO</button>
-        <button className="px-[16px] py-[12px] font-Hemenix font-[16px] text-white">DONE</button>
-        <button className="px-[16px] py-[12px] font-Hemenix font-[16px] text-white">COMMENT</button>
+      <div className="mx-auto mb-[50px] mt-[72px] justify-center rounded-lg bg-[#F14B36]">
+        <button className="px-[16px] py-[12px] font-Hemenix font-[16px] text-white">Figma</button>
+        <button className="px-[16px] py-[12px] font-Hemenix font-[16px] text-white">
+          Adobe Suite
+        </button>
+        <button className="px-[16px] py-[12px] font-Hemenix font-[16px] text-white">
+          FRONT-END
+        </button>
+        <button className="px-[16px] py-[12px] font-Hemenix font-[16px] text-white">
+          BACK-END
+        </button>
+        <button className="px-[16px] py-[12px] font-Hemenix font-[16px] text-white">
+          DATABASE
+        </button>
+        <button className="px-[16px] py-[12px] font-Hemenix font-[16px] text-white">AWS</button>
       </div>
       <div className="mx-auto max-w-[1180px] border-t-4 border-[#F14A38]">
         <div className="mx-auto flex items-center gap-[20px] border-b-4 border-[#F14A38] px-[20px] py-[20px]">

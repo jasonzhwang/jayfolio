@@ -16,11 +16,33 @@ const Footer = () => {
               ME HERE:
             </h2>
             <div className="mx-auto flex space-x-[0.5rem] sm:space-x-[1.5rem]">
-              <img src="./contact.svg" alt="" className="w-[50px] sm:w-[80px]" />
-              <img src="./contact.svg" alt="" className="w-[50px] sm:w-[80px]" />
-              <img src="./contact.svg" alt="" className="w-[50px] sm:w-[80px]" />
-              <img src="./contact.svg" alt="" className="w-[50px] sm:w-[80px]" />
-              <img src="./contact.svg" alt="" className="w-[50px] sm:w-[80px]" />
+              <div className="my-auto flex h-[50px] w-[50px] rounded-2xl border-[4px] border-white sm:h-[80px] sm:w-[80px]">
+                <img
+                  src="./linkedin.svg"
+                  alt=""
+                  className="mx-auto my-auto sm:h-[40px] sm:w-[40px]"
+                />
+              </div>
+              <div className="my-auto flex h-[50px] w-[50px] rounded-2xl border-[4px] border-white sm:h-[80px] sm:w-[80px]">
+                <img
+                  src="./github.svg"
+                  alt=""
+                  className="mx-auto my-auto sm:h-[40px] sm:w-[40px]"
+                />
+              </div>
+              <div className="my-auto flex h-[50px] w-[50px] rounded-2xl border-[4px] border-white sm:h-[80px] sm:w-[80px]">
+                <img src="./figma.svg" alt="" className="mx-auto my-auto sm:h-[40px] sm:w-[40px]" />
+              </div>
+              <div className="my-auto flex h-[50px] w-[50px] rounded-2xl border-[4px] border-white sm:h-[80px] sm:w-[80px]">
+                <img
+                  src="./wechat.svg"
+                  alt=""
+                  className="mx-auto my-auto sm:h-[40px] sm:w-[40px]"
+                />
+              </div>
+              <div className="my-auto flex h-[50px] w-[50px] rounded-2xl border-[4px] border-white sm:h-[80px] sm:w-[80px]">
+                <img src="./email.svg" alt="" className="mx-auto my-auto h-[30px] w-[30px]" />
+              </div>
             </div>
           </div>
         </div>
@@ -36,12 +58,6 @@ const Footer = () => {
           </div>
           <div className="flex flex-1">
             <Menu />
-            {/* <ul className="hidden flex-1 justify-center gap-[40px] px-[50px] lg:flex">
-              <li className="text-white font-Hemenix">CASES</li>
-              <li className="text-white font-Hemenix">CAREERS</li>
-              <li className="text-white font-Hemenix">BLOGS</li>
-              <li className="text-white font-Hemenix">ABOUT</li>
-            </ul> */}
           </div>
           <p className="my-auto ml-auto font-Hemenix text-[12px] text-[#FDED39]">
             2023 | COPYRIGHT
