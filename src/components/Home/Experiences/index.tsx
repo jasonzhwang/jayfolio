@@ -27,7 +27,7 @@ const ExperienceSection = () => {
             </div>
             <p className="mx-auto font-Hemenix font-extrabold text-white">Remote</p>
           </div>
-          <div className="flex min-w-[200px] max-w-[250px] flex-col">
+          <div className="hidden min-w-[200px] max-w-[250px] flex-col md:flex">
             <h3 className="mx-auto font-Hemenix text-[36px] font-black text-white">TaoTech</h3>
             <p className="mx-auto pb-[45px] pt-[45px] text-[24px] font-extrabold text-white">
               Full-Stack
@@ -39,7 +39,7 @@ const ExperienceSection = () => {
             </div>
             <p className="mx-auto font-Hemenix font-extrabold text-white">Remote</p>
           </div>
-          <div className="flex min-w-[200px] max-w-[250px] flex-col">
+          <div className="hidden min-w-[200px] max-w-[250px] flex-col lg:flex">
             <h3 className="mx-auto font-Hemenix text-[36px] font-black text-white">TaoTech</h3>
             <p className="mx-auto pb-[45px] pt-[45px] text-[24px] font-extrabold text-white">
               Full-Stack
