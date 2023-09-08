@@ -1,8 +1,8 @@
-import nextJest from 'next/jest.js';
+import nextJest from "next/jest.js";
 
 const createJestConfig = nextJest({
   // Provide the path to your Next.js app to load next.config.js and .env files in your test environment
-  dir: './',
+  dir: "./",
 });
 
 // Add any custom config to be passed to Jest
@@ -11,7 +11,7 @@ const customJestConfig = {
   // Add more setup options before each test is run
   // setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
 
-  testEnvironment: 'jest-environment-jsdom',
+  testEnvironment: "jest-environment-jsdom",
 };
 
 const jestConfig = async () => {
@@ -20,7 +20,7 @@ const jestConfig = async () => {
     ...nextJestConfig,
     moduleNameMapper: {
       // Workaround to put our SVG mock first
-      '\\.svg$': '<rootDir>/__mocks__/svg.js',
+      "\\.svg$": "<rootDir>/__mocks__/svg.js",
       ...nextJestConfig.moduleNameMapper,
     },
   };

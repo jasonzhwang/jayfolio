@@ -6,11 +6,11 @@ import { useSession } from "next-auth/react";
 const Layout: React.FC<{ children: ReactNode }> = ({ children }) => {
   const { data: session } = useSession();
   return (
-    <>
+    <section>
       <Header session={session} />
       <main>{children}</main>
       <Footer />
-    </>
+    </section>
   );
 };
 export default Layout;

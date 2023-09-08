@@ -3,7 +3,8 @@ import Menu from "@/src/components/Shared/Menu";
 
 const Header = ({ session }: { session: Session | null }) => {
   return (
-    <header className="mx-[15px] flex pt-[45px] md:mx-[32px]">
+    // <header className="mx-[15px] flex pt-[45px] md:mx-[32px]">
+    <header className="flex pt-[5px] md:mx-[32px]">
       <div className="mx-auto flex w-full max-w-[1180px]">
         <div className="flex rounded-l-xl border-red-400 bg-[#F3F3F3]">
           <div className="flex h-[99px] rounded-l-xl border-r-4 border-[#FE5943] bg-gray-200">
@@ -20,7 +21,7 @@ const Header = ({ session }: { session: Session | null }) => {
         <div className="flex flex-1 rounded-r-xl border-4 border-l-0 border-[#F34932] bg-[#FE5943]">
           <Menu />
           <div className="flex flex-1">
-            <div className="my-auto hidden flex-1 justify-center gap-[10px] px-[16px] sm:flex">
+            <div className="my-auto hidden flex-1 justify-center gap-[5px] sm:flex">
               <div className="flex h-[50px] w-[50px] rounded-full bg-[#F14A38]">
                 <img src="./linkedin.svg" className="mx-auto my-auto h-[20px]" />
               </div>
