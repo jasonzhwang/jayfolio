@@ -1,6 +1,7 @@
 @import url("/fonts/Hemenix.ttf");
 @import url("/fonts/Nba_Lakers.ttf");
 @import url("/fonts/Robuck.otf");
+@import "../styles//fonts.css";
 
 @tailwind base;
 @layer base {
