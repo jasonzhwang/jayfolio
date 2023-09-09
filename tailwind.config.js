@@ -12,7 +12,7 @@ module.exports = {
     extend: {
       fontFamily: {
         Hemenix: "Hemenix",
-        Nba_Lakers: "Nba_Lakers",
+        Nba_Lakers: "NBA Lakers",
         Robuck: "Robuck",
       },
       fontSize: {},

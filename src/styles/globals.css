@@ -1,15 +1,6 @@
-@font-face {
-  font-family: "Hemenix";
-  src: local("Hemenix"), url(/fonts/Hemenix.ttf) format("ttf");
-}
-@font-face {
-  font-family: "Nba_Lakers";
-  src: local("NBA Lakers"), url(/fonts/Nba_Lakers.ttf) format("ttf");
-}
-@font-face {
-  font-family: "Robuck";
-  src: local("Robuck"), url(/fonts/Robuck.otf) format("otf");
-}
+@import url("/fonts/Hemenix.ttf");
+@import url("/fonts/Nba_Lakers.ttf");
+@import url("/fonts/Robuck.otf");
 
 @tailwind base;
 @layer base {
