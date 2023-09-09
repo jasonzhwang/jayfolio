@@ -1,6 +1,7 @@
 import react, { useState } from "react";
 import { Session } from "next-auth";
 import Menu from "@/src/components/Shared/Menu";
+import Hamburger from "@/public/hamburger.svg";
 import Close from "@/public/close.svg";
 
 const Header = ({ session }: { session: Session | null }) => {
@@ -40,28 +41,28 @@ const Header = ({ session }: { session: Session | null }) => {
                 <img src="./figma.svg" className="mx-auto my-auto h-[20px]" />
               </div>
             </div>
-            <div className="ml-auto flex gap-[5px] pr-[50px]">
+            <div className="ml-auto flex gap-[5px] pr-[20px]">
               <span className="my-auto px-[16px] py-[12px] text-xl font-black text-white">
                 LOGIN
               </span>
               {isMenuShown && (
                 <div
-                  className="my-auto h-[16px] w-[24px] lg:hidden"
+                  className="my-auto flex h-[30px] w-[30px] lg:hidden"
                   onClick={() => {
                     setIsMenuShown(!isMenuShown);
                   }}
                 >
-                  <Close className="text-white" />
+                  <Close className="mx-auto my-auto h-full text-white" />
                 </div>
               )}
-              {isMenuShown && (
+              {!isMenuShown && (
                 <div
-                  className="my-auto h-[16px] w-[24px] lg:hidden"
+                  className="my-auto flex h-[30px] w-[30px] lg:hidden"
                   onClick={() => {
                     setIsMenuShown(!isMenuShown);
                   }}
                 >
-                  <img src="/collapsible-navigation.svg" alt="" />
+                  <Hamburger className="mx-auto my-auto h-full text-white" />
                 </div>
               )}
             </div>
