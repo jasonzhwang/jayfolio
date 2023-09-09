@@ -4,7 +4,7 @@ import ServiceCard from "../../Shared/ServiceCard";
 const ServiceSection = () => {
   return (
     <section className="mx-[15px] flex flex-col md:mx-0">
-      <p className="mx-auto pb-[50px] font-Robuck text-[64px] tracking-wider text-white">
+      <p className="mx-auto pb-[50px] text-center font-Robuck text-[64px] tracking-wider text-white">
         What I&apos;m interested
       </p>
       <div className="mx-auto flex max-w-[1180px] flex-col gap-[10px] lg:flex-row">

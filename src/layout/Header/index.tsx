@@ -1,7 +1,15 @@
+import react, { useState } from "react";
 import { Session } from "next-auth";
 import Menu from "@/src/components/Shared/Menu";
+import Close from "@/public/close.svg";
 
 const Header = ({ session }: { session: Session | null }) => {
+  const [isMenuShown, setIsMenuShown] = useState(false);
+
+  const handleMenuButtonClick = () => {
+    setIsMenuShown(!isMenuShown);
+  };
+
   return (
     // <header className="mx-[15px] flex pt-[45px] md:mx-[32px]">
     <header className="flex pt-[5px] md:mx-[32px]">
@@ -36,15 +44,40 @@ const Header = ({ session }: { session: Session | null }) => {
               <span className="my-auto px-[16px] py-[12px] text-xl font-black text-white">
                 LOGIN
               </span>
-              <img
-                src="/collapsible-navigation.svg"
-                alt=""
-                className="my-auto h-[16px] w-[24px] lg:hidden"
-              />
+              {isMenuShown && (
+                <div
+                  className="my-auto h-[16px] w-[24px] lg:hidden"
+                  onClick={() => {
+                    setIsMenuShown(!isMenuShown);
+                  }}
+                >
+                  <Close className="text-white" />
+                </div>
+              )}
+              {isMenuShown && (
+                <div
+                  className="my-auto h-[16px] w-[24px] lg:hidden"
+                  onClick={() => {
+                    setIsMenuShown(!isMenuShown);
+                  }}
+                >
+                  <img src="/collapsible-navigation.svg" alt="" />
+                </div>
+              )}
             </div>
           </div>
         </div>
       </div>
+      {isMenuShown && (
+        <div className="absolute top-[110px] z-10 flex h-[500px] w-full items-center justify-center bg-white md:w-[93%] lg:hidden">
+          <ul className="flex flex-col items-center gap-[50px] text-center leading-8">
+            <li className="font-Robuck text-[32px] tracking-widest text-[#F14A38]">CASES</li>
+            <li className="font-Robuck text-[32px] tracking-widest text-[#F14A38]">SKILLS</li>
+            <li className="font-Robuck text-[32px] tracking-widest text-[#F14A38]">CAREER</li>
+            <li className="font-Robuck text-[32px] tracking-widest text-[#F14A38]">BLOGS</li>
+          </ul>
+        </div>
+      )}
     </header>
   );
 };

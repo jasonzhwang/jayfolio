@@ -1,0 +1,20 @@
+@font-face {
+  font-family: "Hemenix"; /* Provide a unique name for your font */
+  src: url("/fonts/Hemenix.ttf") format("ttf"); /* Adjust the path */
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Nba_Lakers"; /* Provide a unique name for your font */
+  src: url("/fonts/Nba_Lakers.ttf") format("ttf"); /* Adjust the path */
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Robuck"; /* Provide a unique name for your font */
+  src: url("/fonts/Robuck.otf") format("otf"); /* Adjust the path */
+  font-weight: normal;
+  font-style: normal;
+}
