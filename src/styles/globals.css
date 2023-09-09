@@ -1,10 +1,17 @@
-@import url("/fonts/Hemenix.ttf");
-@import url("/fonts/Nba_Lakers.ttf");
-@import url("/fonts/Robuck.otf");
-@import "../styles//fonts.css";
-
 @tailwind base;
 @layer base {
+  @font-face {
+    font-family: "Robuck";
+    src: url("../../fonts/Robuck.otf");
+  }
+  @font-face {
+    font-family: "Hemenix";
+    src: url("../../fonts/Hemenix.ttf");
+  }
+  @font-face {
+    font-family: "Nba_Lakers";
+    src: url("../../fonts/Nba_Lakers.ttf");
+  }
 }
 @tailwind components;
 @tailwind utilities;

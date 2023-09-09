@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+
 module.exports = {
   content: [
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
@@ -12,7 +13,7 @@ module.exports = {
     extend: {
       fontFamily: {
         Hemenix: "Hemenix",
-        Nba_Lakers: "NBA Lakers",
+        Nba_Lakers: "Nba_Lakers",
         Robuck: "Robuck",
       },
       fontSize: {},
