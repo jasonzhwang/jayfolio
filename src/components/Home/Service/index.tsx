@@ -13,9 +13,9 @@ const ServiceSection = () => {
             index={1}
             advDescription="CHRACTER"
             advPic="./design.svg"
-            serviceTitle="CREATIVE DESIGN"
+            serviceTitle="GRAPHIC DESIGN"
             serviceSubTitle="VARIOUS WORKS"
-            skillSet={["Photoshop", "InDesign", "Illustrator"]}
+            skillSet={["Product List", "Flyers", "Namecards", "Brochures", "Commercial Stickers"]}
           />
           <ServiceCard
             index={2}
@@ -23,7 +23,7 @@ const ServiceSection = () => {
             advPic="./uiux.svg"
             serviceTitle="UI & UX Design"
             serviceSubTitle="VARIOUS WORKS"
-            skillSet={["Figma", "XD", "Design System"]}
+            skillSet={["User Interface", "User Interaction", "Figma", "System Design"]}
           />
         </div>
         <div className="mx-auto flex flex-col gap-[10px] sm:flex-row">
@@ -33,7 +33,7 @@ const ServiceSection = () => {
             advPic="./light.svg"
             serviceTitle="Web Development"
             serviceSubTitle="VARIOUS WORKS"
-            skillSet={["Frontend", "Backend", "Database"]}
+            skillSet={["Full-Stack", "Microservices", "NoSQL & Relational DB", "AWS", "Algorithms"]}
           />
           <ServiceCard
             index={4}
@@ -41,7 +41,7 @@ const ServiceSection = () => {
             advPic="./support.svg"
             serviceTitle="IT Support"
             serviceSubTitle="VARIOUS WORKS"
-            skillSet={["NAS", "Pronto", "HyperV", "VMware"]}
+            skillSet={["Help Desk", "Server", "Prototyping", "ERP", "User mgmt", "Data backup"]}
           />
         </div>
       </div>
