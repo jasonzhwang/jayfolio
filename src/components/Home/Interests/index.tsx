@@ -1,7 +1,7 @@
 import React from "react";
-import ServiceCard from "../../Shared/ServiceCard";
+import InterestsCard from "../../Shared/InterestsCard";
 
-const ServiceSection = () => {
+const InterestsSection = () => {
   return (
     <section className="mx-[15px] flex flex-col md:mx-0">
       <p className="mx-auto pb-[50px] text-center font-Robuck text-[64px] tracking-wider text-white">
@@ -9,38 +9,44 @@ const ServiceSection = () => {
       </p>
       <div className="mx-auto flex max-w-[1180px] flex-col gap-[10px] lg:flex-row">
         <div className="mx-auto flex flex-col gap-[10px] sm:flex-row">
-          <ServiceCard
+          <InterestsCard
             index={1}
             advDescription="CHRACTER"
             advPic="./design.svg"
-            serviceTitle="GRAPHIC DESIGN"
-            serviceSubTitle="VARIOUS WORKS"
+            InterestsTitle="GRAPHIC DESIGN"
+            InterestsSubTitle="VARIOUS WORKS"
             skillSet={["Product List", "Flyers", "Namecards", "Brochures", "Commercial Stickers"]}
           />
-          <ServiceCard
+          <InterestsCard
             index={2}
             advDescription="CUSTOM"
             advPic="./uiux.svg"
-            serviceTitle="UI & UX Design"
-            serviceSubTitle="VARIOUS WORKS"
+            InterestsTitle="UI & UX Design"
+            InterestsSubTitle="VARIOUS WORKS"
             skillSet={["User Interface", "User Interaction", "Figma", "System Design"]}
           />
         </div>
         <div className="mx-auto flex flex-col gap-[10px] sm:flex-row">
-          <ServiceCard
+          <InterestsCard
             index={3}
             advDescription="EFFICIENT"
             advPic="./light.svg"
-            serviceTitle="Web Development"
-            serviceSubTitle="VARIOUS WORKS"
-            skillSet={["Full-Stack", "Microservices", "NoSQL & Relational DB", "AWS", "Algorithms"]}
+            InterestsTitle="Web Development"
+            InterestsSubTitle="VARIOUS WORKS"
+            skillSet={[
+              "Full-Stack",
+              "MicroInterestss",
+              "NoSQL & Relational DB",
+              "AWS",
+              "Algorithms",
+            ]}
           />
-          <ServiceCard
+          <InterestsCard
             index={4}
             advDescription="CONSISTENT"
             advPic="./support.svg"
-            serviceTitle="IT Support"
-            serviceSubTitle="VARIOUS WORKS"
+            InterestsTitle="IT Support"
+            InterestsSubTitle="VARIOUS WORKS"
             skillSet={["Help Desk", "Server", "Prototyping", "ERP", "User mgmt", "Data backup"]}
           />
         </div>
@@ -49,4 +55,4 @@ const ServiceSection = () => {
   );
 };
 
-export default ServiceSection;
+export default InterestsSection;

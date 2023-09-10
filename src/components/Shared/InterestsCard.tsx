@@ -2,26 +2,26 @@ import React from "react";
 import TagButton from "./TagButton";
 import SendMessage from "@/public/send-message.svg";
 
-const serviceImg = ["./flyer.png", "./uiux.png", "./coding.jpeg", "./it-support.jpeg"];
+const InterestsImg = ["./flyer.png", "./uiux.png", "./coding.jpeg", "./it-support.jpeg"];
 
-interface ServiceCardProps {
+interface InterestsCardProps {
   index: number;
   advDescription: string;
   advPic: string;
-  serviceTitle: string;
-  serviceSubTitle: string;
+  InterestsTitle: string;
+  InterestsSubTitle: string;
   skillSet: string[];
 }
 
-const ServiceCard: React.FC<ServiceCardProps> = ({
+const InterestsCard: React.FC<InterestsCardProps> = ({
   index,
   advDescription,
   advPic,
-  serviceTitle,
-  serviceSubTitle,
+  InterestsTitle,
+  InterestsSubTitle,
   skillSet,
 }) => {
-  const imgSrc = serviceImg[index - 1];
+  const imgSrc = InterestsImg[index - 1];
   return (
     <div className="group flex flex-col lg:min-h-[580px]">
       <div className="flex flex-col rounded-xl bg-[#F14A38] px-[20px]">
@@ -39,11 +39,11 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
           <img src={imgSrc} alt="" className="h-[190px] w-[200px]" />
         </div>
         <h2 className="mx-auto py-[20px] text-center font-Robuck text-[36px] font-light leading-none text-white">
-          {serviceTitle}
+          {InterestsTitle}
         </h2>
         <div className="flex h-[80px] flex-col">
           <p className="mx-auto pb-[18px] font-Hemenix text-[14px] text-white group-hover:hidden">
-            {serviceSubTitle}
+            {InterestsSubTitle}
           </p>
           <div className="flex h-[25px] max-w-[200px] flex-wrap justify-center gap-[3px] overflow-hidden pb-[0px] group-hover:h-[50px]">
             {skillSet.map((item, index) => {
@@ -55,11 +55,11 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
           <SendMessage className="h-full w-full text-white" />
         </div>
       </div>
-      <button className="relative mx-auto hidden -translate-y-3/4 rounded-xl border-[5px] border-[#FE5943] bg-[#FDCE40] px-[16px] py-[12px] text-white group-hover:block">
+      <button className="relative mx-auto hidden -translate-y-3/4 rounded-xl border-[5px] border-[#FE5943] bg-[#FDCE40] px-[16px] py-[12px] font-Hemenix text-white group-hover:block">
         Send Enquries
       </button>
     </div>
   );
 };
 
-export default ServiceCard;
+export default InterestsCard;

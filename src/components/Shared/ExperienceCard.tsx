@@ -117,9 +117,12 @@ const ExperienceCard: React.FC<ExperienceItemProps> = ({ eachExperience }) => {
       </div>
       <div className="hidden translate-y-[10px] group-hover:flex">
         <div className="flex flex-1 justify-center">
-          <button className="flex rounded-xl border-[5px] border-[#FE5943] bg-white px-[16px] py-[12px] text-[#FE5943] group-hover:flex lg:ml-0">
+          <button className="flex rounded-xl border-[5px] border-[#FE5943] bg-white px-[16px] py-[12px] font-Hemenix text-[#FE5943] group-hover:flex group-hover:bg-[#FFCD3C] lg:ml-0">
             Learn More
           </button>
+          {/* <button className="mx-auto mt-[39px] bg-white px-[16px] py-[12px] text-[#FE5943] rounded-md lg:ml-0 font-Hemenix hover:bg-[#FFCD3C]">
+            Learn more
+          </button> */}
         </div>
       </div>
     </div>

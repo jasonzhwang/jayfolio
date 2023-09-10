@@ -1,6 +1,5 @@
 import HeroSection from "../components/Home/Hero";
-import ServiceSection from "../components/Home/Service";
-import CaseSection from "../components/Home/Case";
+import InterestsSection from "../components/Home/Interests";
 import ExperienceSection from "../components/Home/Experiences";
 import ShowCase from "../components/Home/Showcase";
 import SkillSection from "../components/Home/Skills";
@@ -9,7 +8,7 @@ export default function Home() {
   return (
     <>
       <HeroSection />
-      <ServiceSection />
+      <InterestsSection />
       {/* <CaseSection /> */}
       <SkillSection />
       <ShowCase />

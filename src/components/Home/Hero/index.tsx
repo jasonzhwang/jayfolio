@@ -16,7 +16,7 @@ const HeroSection = () => {
           <p className="mx-auto w-[80%] text-center font-Hemenix text-[16px] text-white lg:ml-0 lg:w-[70%] lg:text-left">
             JayJay is an experienced Full Stack Developer making websites with 💛
           </p>
-          <button className="mx-auto mt-[39px] bg-white px-[16px] py-[12px] text-[#FE5943] lg:ml-0">
+          <button className="mx-auto mt-[39px] rounded-md bg-white px-[16px] py-[12px] font-Hemenix text-[#FE5943] hover:bg-[#FFCD3C] lg:ml-0">
             Learn more
           </button>
         </div>
