@@ -3,6 +3,9 @@ import { Session } from "next-auth";
 import Menu from "@/src/components/Shared/Menu";
 import Hamburger from "@/public/hamburger.svg";
 import Close from "@/public/close.svg";
+import Linkedin from "@/public/linkedin.svg";
+import Github from "@/public/github.svg";
+import Figma from "@/public/figma.svg";
 
 const Header = ({ session }: { session: Session | null }) => {
   const [isMenuShown, setIsMenuShown] = useState(false);
@@ -12,7 +15,6 @@ const Header = ({ session }: { session: Session | null }) => {
   };
 
   return (
-    // <header className="mx-[15px] flex pt-[45px] md:mx-[32px]">
     <header className="flex pt-[5px] md:mx-[32px]">
       <div className="mx-auto flex w-full max-w-[1180px]">
         <div className="flex rounded-l-xl border-red-400 bg-[#F3F3F3]">
@@ -31,7 +33,7 @@ const Header = ({ session }: { session: Session | null }) => {
           <Menu />
           <div className="flex flex-1">
             <div className="my-auto hidden flex-1 justify-center gap-[5px] sm:flex">
-              <div className="flex h-[50px] w-[50px] rounded-full bg-[#F14A38]">
+              {/* <div className="flex h-[50px] w-[50px] rounded-full bg-[#F14A38]">
                 <img src="./linkedin.svg" className="mx-auto my-auto h-[20px]" />
               </div>
               <div className="flex h-[50px] w-[50px] rounded-full bg-[#F14A38]">
@@ -39,6 +41,15 @@ const Header = ({ session }: { session: Session | null }) => {
               </div>
               <div className="flex h-[50px] w-[50px] rounded-full bg-[#F14A38]">
                 <img src="./figma.svg" className="mx-auto my-auto h-[20px]" />
+              </div> */}
+              <div className="flex h-[50px] w-[50px] items-center justify-center rounded-full bg-[#F14A38] hover:border-[3px] hover:border-[#FDCE40] hover:bg-[#0077B5]">
+                <Linkedin className="h-[30px] w-[30px]" />
+              </div>
+              <div className="flex h-[50px] w-[50px] items-center justify-center rounded-full bg-[#F14A38] hover:border-[3px] hover:border-[#FDCE40] hover:bg-[#6e5494]">
+                <Github className="h-[30px] w-[30px]" />
+              </div>
+              <div className="flex h-[50px] w-[50px] items-center justify-center rounded-full bg-[#F14A38] hover:border-[3px] hover:border-[#FDCE40] hover:bg-[#00BEFF]">
+                <Figma className="h-[30px] w-[30px]" />
               </div>
             </div>
             <div className="ml-auto flex gap-[5px] pr-[20px]">
@@ -76,6 +87,17 @@ const Header = ({ session }: { session: Session | null }) => {
             <li className="font-Robuck text-[32px] tracking-widest text-[#F14A38]">SKILLS</li>
             <li className="font-Robuck text-[32px] tracking-widest text-[#F14A38]">CAREER</li>
             <li className="font-Robuck text-[32px] tracking-widest text-[#F14A38]">BLOGS</li>
+            <li className="flex gap-[10px]">
+              <div className="flex h-[50px] w-[50px] items-center justify-center rounded-full bg-[#0077B5]">
+                <Linkedin className="h-[30px] w-[30px]" />
+              </div>
+              <div className="flex h-[50px] w-[50px] items-center justify-center rounded-full bg-[#6e5494]">
+                <Github className="h-[30px] w-[30px]" />
+              </div>
+              <div className="flex h-[50px] w-[50px] items-center justify-center rounded-full bg-[#00BEFF]">
+                <Figma className="h-[30px] w-[30px]" />
+              </div>
+            </li>
           </ul>
         </div>
       )}
