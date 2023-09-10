@@ -69,8 +69,8 @@ const ShowCase = () => {
                       .map((_, index) => (
                         <button
                           key={index}
-                          className={`h-[4px] w-[38px] bg-white hover:bg-[#FFD241] focus:bg-[#FFD241] ${
-                            currentCase === index ? "bg-[#FFD241]" : ""
+                          className={`h-[4px] w-[38px] hover:bg-[#FFD241] focus:bg-[#FFD241] ${
+                            currentCase === index ? "bg-[#FFD241]" : "bg-white"
                           }`}
                           onClick={() => {
                             setCurrentCase(index);
@@ -109,7 +109,9 @@ const ShowCase = () => {
                 <div
                   className="absolute left-0 top-1/2 ml-[30px]"
                   onClick={() => {
-                    currentCase != 0 && setCurrentCase(currentCase - 1);
+                    currentCase === 0
+                      ? setCurrentCase(AllCases.length - 1)
+                      : setCurrentCase(currentCase - 1);
                   }}
                 >
                   <LeftArrow className="h-[20px] w-[20px] text-white" />
@@ -117,7 +119,9 @@ const ShowCase = () => {
                 <div
                   className="absolute right-0 top-1/2 mr-[30px]"
                   onClick={() => {
-                    setCurrentCase(currentCase + 1);
+                    currentCase === AllCases.length - 1
+                      ? setCurrentCase(0)
+                      : setCurrentCase(currentCase + 1);
                   }}
                 >
                   <RightArrow className="h-[20px] w-[20px] text-white" />
