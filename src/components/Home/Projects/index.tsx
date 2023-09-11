@@ -4,7 +4,7 @@ import StudioName from "../../Shared/StudioName";
 import LeftArrow from "@/public/arrow-point-to-left.svg";
 import RightArrow from "@/public/arrow-point-to-right.svg";
 
-export const AllCases = [
+export const AllProjects = [
   {
     name: "TaoTalk",
     link: "https://taotalk.vercel.app/",
@@ -32,11 +32,11 @@ export const AllCases = [
   },
 ];
 
-const ShowCase = () => {
-  const [currentCase, setCurrentCase] = useState(0);
-  const currentCaseInfo = AllCases[currentCase];
+const Projects = () => {
+  const [currentProject, setCurrentProject] = useState(0);
+  const currentProjectInfo = AllProjects[currentProject];
   return (
-    <section className="mt-[100px] flex flex-col">
+    <section className="mt-[100px] flex flex-col" id="projects">
       <p className="mx-auto pb-[50px] font-Robuck text-[64px] tracking-wider text-white">
         Projects
       </p>
@@ -70,21 +70,21 @@ const ShowCase = () => {
                         <button
                           key={index}
                           className={`h-[4px] w-[38px] hover:bg-[#FFD241] focus:bg-[#FFD241] ${
-                            currentCase === index ? "bg-[#FFD241]" : "bg-white"
+                            currentProject === index ? "bg-[#FFD241]" : "bg-white"
                           }`}
                           onClick={() => {
-                            setCurrentCase(index);
-                            console.log(currentCase, index);
+                            setCurrentProject(index);
+                            console.log(currentProject, index);
                           }}
                         ></button>
                       ))}
                   </div>
                   <p className="mx-auto w-[100%] text-center text-white lg:ml-0 lg:text-left ">
-                    {currentCaseInfo.name}
+                    {currentProjectInfo.name}
                   </p>
                   <div className="flex">
                     {/* <button className="mx-auto mt-[61px] bg-white px-[16px] py-[12px] text-[#FE5943] lg:ml-0">
-                  View Cases
+                  View Projects
                 </button> */}
                     <div className="mx-auto mt-[61px] flex gap-[20px] lg:ml-0">
                       <button className="border-[2px] border-[#FFD241] px-[12px] py-[8px] text-[#FFD241] hover:bg-[#FFD241] hover:text-white">
@@ -105,13 +105,13 @@ const ShowCase = () => {
                 {/* <img src="./jobpin.png" alt="" /> */}
                 {/* <img src="./TaoTalk.png" alt="" /> */}
                 {/* <img src="./jayjayStudio.png" alt="" /> */}
-                <img src={currentCaseInfo.imgSrc} alt="" />
+                <img src={currentProjectInfo.imgSrc} alt="" />
                 <div
                   className="absolute left-0 top-1/2 ml-[30px]"
                   onClick={() => {
-                    currentCase === 0
-                      ? setCurrentCase(AllCases.length - 1)
-                      : setCurrentCase(currentCase - 1);
+                    currentProject === 0
+                      ? setCurrentProject(AllProjects.length - 1)
+                      : setCurrentProject(currentProject - 1);
                   }}
                 >
                   <LeftArrow className="h-[20px] w-[20px] text-white" />
@@ -119,9 +119,9 @@ const ShowCase = () => {
                 <div
                   className="absolute right-0 top-1/2 mr-[30px]"
                   onClick={() => {
-                    currentCase === AllCases.length - 1
-                      ? setCurrentCase(0)
-                      : setCurrentCase(currentCase + 1);
+                    currentProject === AllProjects.length - 1
+                      ? setCurrentProject(0)
+                      : setCurrentProject(currentProject + 1);
                   }}
                 >
                   <RightArrow className="h-[20px] w-[20px] text-white" />
@@ -143,4 +143,4 @@ const ShowCase = () => {
     </section>
   );
 };
-export default ShowCase;
+export default Projects;

@@ -132,14 +132,14 @@ const SkillSection = () => {
   const backendSkills: BackendSkills = skillSets[skillSet];
 
   return (
-    <section className="mx-[15px] flex flex-col md:mx-[32px]">
+    <section className="mx-[15px] flex flex-col md:mx-[32px]" id="skills">
       <p className="mx-auto mt-[72px] pb-[50px] font-Robuck text-[64px] tracking-wider text-white">
         Skills
       </p>
       <div className="mx-auto mb-[50px] justify-center rounded-lg bg-[#F14B36]">
         {Object.keys(skillSets).map((skill, index) => (
           <button
-            className="px-[16px] py-[12px] font-Hemenix text-[12px] text-white hover:rounded-lg hover:bg-white hover:text-[#F74E3B]"
+            className="px-[16px] py-[12px] font-Hemenix text-[16px] text-white hover:rounded-lg hover:bg-white hover:text-[#F74E3B]"
             key={index}
             onClick={() => {
               setSkillSet(skill);

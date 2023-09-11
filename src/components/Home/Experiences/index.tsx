@@ -7,7 +7,7 @@ import LeftArrow from "@/public/arrow-point-to-left.svg";
 const ExperienceSection = () => {
   const [count, setCount] = useState(0);
   return (
-    <section className="mx-[15px] mt-[100px] flex flex-col md:mx-[32px]">
+    <section className="mx-[15px] mt-[100px] flex flex-col md:mx-[32px]" id="experiences">
       <p className="mx-auto pb-[50px] font-Robuck text-[64px] tracking-wider text-white">Career</p>
       <div className="mx-auto flex w-full max-w-[1180px] flex-col-reverse rounded-2xl bg-[#F74E3B] py-[35px] sm:flex-row">
         <div className="ml-0 flex flex-col sm:ml-0 sm:pl-[120px]">

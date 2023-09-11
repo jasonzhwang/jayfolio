@@ -3,7 +3,7 @@ import InterestsCard from "../../Shared/InterestsCard";
 
 const InterestsSection = () => {
   return (
-    <section className="mx-[15px] flex flex-col md:mx-0">
+    <section className="mx-[15px] flex flex-col md:mx-0" id="interests">
       <p className="mx-auto pb-[50px] text-center font-Robuck text-[64px] tracking-wider text-white">
         What I&apos;m interested
       </p>
