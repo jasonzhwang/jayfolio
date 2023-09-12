@@ -2,134 +2,129 @@ import React, { useState } from "react";
 import Skill from "../../Shared/skill";
 
 type SkillSets = {
-  [key: string]: BackendSkills;
+  [key: string]: Skills;
 };
 
-type BackendSkills = {
+type Skills = {
   [key: string]: {
-    year: string;
-    popularity: "popular" | "intermediate" | "low";
-    category: "Tools" | "framework" | "Language" | "API";
+    popularity: 1 | 2 | 3;
+    category: string;
+    linkUrl: string;
   };
 };
 
 const skillSets: SkillSets = {
   Web_DEV: {
     "next.js": {
-      year: "2023",
-      popularity: "popular",
-      category: "Tools",
+      popularity: 3,
+      category: "Framework",
+      linkUrl: "https://nextjs.org/",
     },
     "node.js": {
-      year: "2023",
-      popularity: "popular",
-      category: "Tools",
+      popularity: 3,
+      category: "Backend",
+      linkUrl: "https://nodejs.org/",
     },
     Wordpress: {
-      year: "2023",
-      popularity: "popular",
-      category: "Tools",
+      popularity: 3,
+      category: "Content Management",
+      linkUrl: "https://wordpress.org/",
     },
     Stripe: {
-      year: "2023",
-      popularity: "popular",
-      category: "Tools",
+      popularity: 3,
+      category: "API",
+      linkUrl: "https://stripe.com/",
     },
     MongoDB: {
-      year: "2023",
-      popularity: "popular",
-      category: "Tools",
+      popularity: 3,
+      category: "DataBase",
+      linkUrl: "https://www.mongodb.com/",
     },
     Reactjs: {
-      year: "2023",
-      popularity: "popular",
-      category: "Tools",
+      popularity: 3,
+      category: "Framework",
+      linkUrl: "https://reactjs.org/",
     },
     Redux: {
-      year: "2023",
-      popularity: "popular",
-      category: "Tools",
+      popularity: 3,
+      category: "Library",
+      linkUrl: "https://redux.js.org/",
     },
-    "Restful API": {
-      year: "2023",
-      popularity: "popular",
-      category: "Tools",
+    RestAPI: {
+      popularity: 3,
+      category: "API",
+      linkUrl: "",
     },
     Typescript: {
-      year: "2023",
-      popularity: "popular",
-      category: "Tools",
+      popularity: 3,
+      category: "language",
+      linkUrl: "https://www.typescriptlang.org/",
     },
     SCSS: {
-      year: "2023",
-      popularity: "popular",
-      category: "Tools",
+      popularity: 3,
+      category: "CSS Preprocessors",
+      linkUrl: "https://sass-lang.com/",
     },
     Keystone: {
-      year: "2023",
-      popularity: "popular",
-      category: "Tools",
+      popularity: 1,
+      category: "Framework",
+      linkUrl: "https://keystonejs.com/",
     },
-    // "Styled Components": {
-    //   year: "2023",
-    //   popularity: "popular",
-    //   category: "Tools",
-    // },
     Git: {
-      year: "2023",
-      popularity: "popular",
-      category: "Tools",
+      popularity: 3,
+      category: "Version control",
+      linkUrl: "https://git-scm.com/",
     },
     Scrum: {
-      year: "2023",
-      popularity: "popular",
-      category: "Tools",
+      popularity: 3,
+      category: "Project Management",
+      linkUrl: "https://www.scrum.org/",
     },
     Swagger: {
-      year: "2023",
-      popularity: "popular",
-      category: "Tools",
+      popularity: 3,
+      category: "API",
+      linkUrl: "https://swagger.io/",
     },
   },
   Design: {
     Figma: {
-      year: "2023",
-      popularity: "popular",
-      category: "Tools",
+      popularity: 3,
+      category: "UI/UX Design",
+      linkUrl: "https://www.figma.com/",
     },
     Indesign: {
-      year: "2023",
-      popularity: "popular",
-      category: "Tools",
+      popularity: 3,
+      category: "Graphic Design",
+      linkUrl: "https://www.adobe.com/products/indesign.html",
     },
     Photoshop: {
-      year: "2023",
-      popularity: "popular",
-      category: "Tools",
+      popularity: 3,
+      category: "Graphic Design",
+      linkUrl: "https://www.adobe.com/products/photoshop.html",
     },
   },
   Tech_Support: {
     Synology: {
-      year: "2023",
-      popularity: "popular",
-      category: "Tools",
+      popularity: 3,
+      category: "NAS",
+      linkUrl: "https://www.synology.com/",
     },
     VMware: {
-      year: "2023",
-      popularity: "popular",
-      category: "Tools",
+      popularity: 3,
+      category: "Virtualization",
+      linkUrl: "https://www.vmware.com/",
     },
     Pronto: {
-      year: "2023",
-      popularity: "popular",
-      category: "Tools",
+      popularity: 3,
+      category: "ERP",
+      linkUrl: "https://www.pronto.com.au/",
     },
   },
 };
 
 const SkillSection = () => {
   const [skillSet, setSkillSet] = useState<string>("Web_DEV");
-  const backendSkills: BackendSkills = skillSets[skillSet];
+  const skills: Skills = skillSets[skillSet];
 
   return (
     <section className="mx-[15px] flex flex-col md:mx-[32px]" id="skills">
@@ -150,9 +145,28 @@ const SkillSection = () => {
         ))}
       </div>
       <div className="mx-auto h-[620px] max-w-[1180px] overflow-y-scroll">
-        {Object.keys(backendSkills).map((skill, index) => (
-          <Skill skillName={skill} year={backendSkills[skill]["year"]} index={index} key={index} />
-        ))}
+        {Object.keys(skills).map((skillName, index) => {
+          const skill = skills[skillName];
+          const category = skill.category;
+          const popularity = skill.popularity;
+          const linkUrl = skill.linkUrl;
+          return (
+            <div
+              key={index}
+              onClick={() => {
+                window.location.href = linkUrl;
+              }}
+            >
+              <Skill
+                skillName={skillName}
+                index={index}
+                key={index}
+                category={category}
+                popularity={popularity}
+              />
+            </div>
+          );
+        })}
       </div>
     </section>
   );

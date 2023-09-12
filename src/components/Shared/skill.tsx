@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Fire from "@/public/fire.svg";
 import Next from "@/public/next.svg";
 import Node from "@/public/nodejs.svg";
 import Category from "@/public/category.svg";
@@ -35,9 +36,7 @@ const iconList: { [key: string]: JSX.Element } = {
     <Photoshop alt="" className="h-full w-full text-[#FFD241] group-hover:text-[#FE5943]" />
   ),
   MongoDB: <MongoDB alt="" className="h-full w-full text-[#FFD241] group-hover:text-[#FE5943]" />,
-  "Restful API": (
-    <RestAPI alt="" className="h-full w-full text-[#FFD241] group-hover:text-[#FE5943]" />
-  ),
+  RestAPI: <RestAPI alt="" className="h-full w-full text-[#FFD241] group-hover:text-[#FE5943]" />,
   Git: <Git alt="" className="h-full w-full text-[#FFD241] group-hover:text-[#FE5943]" />,
   Typescript: (
     <Typescript alt="" className="h-full w-full text-[#FFD241] group-hover:text-[#FE5943]" />
@@ -63,22 +62,32 @@ const iconList: { [key: string]: JSX.Element } = {
 
 interface SkillProps {
   skillName: string;
-  year: string;
+  // year: string;
+  category: string;
+  popularity: number;
   index: number;
 }
 
-const skill: React.FC<SkillProps> = ({ skillName, year, index }) => {
+const skill: React.FC<SkillProps> = ({ skillName, index, category, popularity }) => {
   const icon = iconList[skillName];
   return (
     <div key={index} className="group">
       {index === 0 && <div className="mx-[30px] h-[2px] bg-[#F14A38] group-hover:invisible"></div>}
       <div className="flex bg-[#FE5943] group-hover:rounded-lg group-hover:border-[3px] group-hover:border-[#F14A38]">
         <div className="w-[30px] group-hover:rounded-l-lg group-hover:bg-white"></div>
-        <div className="mx-auto flex items-center gap-[100px] py-[20px] group-hover:bg-white">
-          <div className="flex items-center gap-[20px] sm:gap-[70px]">
-            <p className="hidden font-Hemenix text-[12px] text-white group-hover:text-[#FE5943] sm:flex">
+        <div className="mx-auto flex flex-1 items-center gap-[100px] py-[20px] group-hover:bg-white">
+          <div className="flex items-center gap-[25px] sm:gap-[70px]">
+            {/* <p className="hidden font-Hemenix text-[12px] text-white group-hover:text-[#FE5943] sm:flex">
               {year}
-            </p>
+            </p> */}
+            <div className="mr-auto hidden min-w-[55px] gap-[3px] sm:flex">
+              {Array.from({ length: popularity }, (_, index) => (
+                <Fire
+                  key={index} // Make sure to provide a unique key for each Fire component
+                  className="h-[15px] w-[15px] text-white group-hover:text-[#FE5943]"
+                />
+              ))}
+            </div>
             <div className="h-[60px] w-[60px]">{icon}</div>
             <h2 className="min-w-[140px] font-Hemenix text-[24px] tracking-wider text-white group-hover:text-[#FE5943]">
               {skillName}
@@ -92,8 +101,8 @@ const skill: React.FC<SkillProps> = ({ skillName, year, index }) => {
                   className="h-full w-full text-[#FFD241] group-hover:text-[#FE5943]"
                 />
               </div>
-              <p className="font-Hemenix text-[12px] text-white group-hover:text-[#FE5943]">
-                Tools
+              <p className="min-w-[140px] font-Hemenix text-[12px] text-white group-hover:text-[#FE5943]">
+                {category}
               </p>
             </div>
             <div className="flex items-center gap-[10px]">
@@ -103,7 +112,9 @@ const skill: React.FC<SkillProps> = ({ skillName, year, index }) => {
                   className="h-[23px] w-[23px] text-[#FFD241] group-hover:text-[#FE5943]"
                 />
               </div>
-              <p className="font-Hemenix text-[12px] text-white group-hover:text-[#FE5943]">High</p>
+              <p className="font-Hemenix text-[12px] text-white group-hover:text-[#FE5943]">
+                {popularity === 3 ? "Popular" : popularity === 2 ? "Intermediate" : "low"}
+              </p>
             </div>
           </div>
         </div>

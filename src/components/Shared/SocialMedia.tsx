@@ -13,36 +13,46 @@ interface SocialMediaProps {
 
 const SocialMedia: React.FC<SocialMediaProps> = ({ socialMedia }) => {
   let bgColor;
-  let linkSrc;
+  let imgSrc;
+  let linkUrl: string;
   switch (socialMedia) {
     case SocialMediaType.Linkedin:
       bgColor = "bg-[#0077B5]";
-      linkSrc = "./linkedin.svg";
+      imgSrc = "./linkedin.svg";
+      linkUrl = "https://www.linkedin.com/in/jasonzhw/";
       break;
     case SocialMediaType.Github:
       bgColor = "bg-[#6e5494]";
-      linkSrc = "./github.svg";
+      imgSrc = "./github.svg";
+      linkUrl = "https://github.com/jasonzhwang";
       break;
     case SocialMediaType.Figma:
       bgColor = "bg-[#00BEFF]";
-      linkSrc = "./figma.svg";
+      imgSrc = "./figma.svg";
+      linkUrl =
+        "https://www.figma.com/proto/ggF3BYJNnEwtgce2EaLn5j/JayJay-Studio?type=design&node-id=617-1768&t=HU3sLIE4qyutqLF9-0&scaling=min-zoom&page-id=0%3A1";
       break;
     case SocialMediaType.Wechat:
       bgColor = "bg-[#09B83E]";
-      linkSrc = "./wechat.svg";
+      imgSrc = "./wechat.svg";
+      linkUrl = "";
       break;
     case SocialMediaType.Email:
       bgColor = "bg-[#808080]";
-      linkSrc = "./email.svg";
+      imgSrc = "./email.svg";
+      linkUrl = "";
       break;
   }
   return (
     <div
       // className={`my-auto flex h-[30px] w-[30px] rounded-2xl border-[4px] border-white sm:h-[80px] sm:w-[80px] ${bgColor}`}
       className={`my-auto flex h-[50px] w-[50px] rounded-2xl border-[4px] border-white group-hover:border-[#FDED39] sm:h-[70px] sm:w-[70px] ${bgColor} sm:group-hover:h-[80px] sm:group-hover:w-[80px]`}
+      onClick={() => {
+        window.location.href = linkUrl;
+      }}
     >
       <img
-        src={linkSrc}
+        src={imgSrc}
         alt=""
         className="mx-auto my-auto h-[25px] w-[25px] sm:h-[40px] sm:w-[40px]"
       />

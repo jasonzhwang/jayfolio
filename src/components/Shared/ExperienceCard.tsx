@@ -15,6 +15,7 @@ enum TaotechDetail {
   Title = "Full-Stack Developer",
   Period = "2023-Present",
   EmploymentType = "Full-time",
+  Link = "https://www.taolix.com",
 }
 
 enum JobpinDetail {
@@ -22,6 +23,7 @@ enum JobpinDetail {
   Title = "Full-Stack Developer",
   Period = "2022-2023",
   EmploymentType = "Full-time",
+  Link = "https://jobpin.com.au",
 }
 
 enum BEfoodsDetail {
@@ -29,6 +31,7 @@ enum BEfoodsDetail {
   Title = "IT support",
   Period = "2021-2022",
   EmploymentType = "Full-time",
+  Link = "https://befoodsqld.com.au",
 }
 
 enum GadgetGuysDetail {
@@ -36,6 +39,7 @@ enum GadgetGuysDetail {
   Title = "Mobile Technician",
   Period = "2021-2022",
   EmploymentType = "Full-time",
+  Link = "https://thegadgetguys.com.au",
 }
 
 enum EzozDetail {
@@ -43,6 +47,7 @@ enum EzozDetail {
   Title = "Wordpress Developer",
   Period = "2021-2022",
   EmploymentType = "Intern",
+  Link = "https://ezoz.my",
 }
 
 enum PartnerTechDetail {
@@ -50,6 +55,7 @@ enum PartnerTechDetail {
   Title = "Hardware Technician",
   Period = "2021-2022",
   EmploymentType = "Part-time",
+  Link = "https://www.partnertechcorp.com",
 }
 
 export interface ExperienceItemProps {
@@ -57,7 +63,14 @@ export interface ExperienceItemProps {
 }
 
 const ExperienceCard: React.FC<ExperienceItemProps> = ({ eachExperience }) => {
-  let experience;
+  let experience:
+    | typeof TaotechDetail
+    | typeof JobpinDetail
+    | typeof BEfoodsDetail
+    | typeof GadgetGuysDetail
+    | typeof EzozDetail
+    | typeof PartnerTechDetail
+    | undefined;
   switch (eachExperience) {
     case AllExperiences[0]:
       experience = TaotechDetail;
@@ -79,7 +92,14 @@ const ExperienceCard: React.FC<ExperienceItemProps> = ({ eachExperience }) => {
       break;
   }
   return (
-    <div className="group relative max-h-[300px]">
+    <div
+      className="group relative max-h-[300px]"
+      onClick={() => {
+        if (experience) {
+          window.location.href = experience?.Link;
+        }
+      }}
+    >
       {/* <div className="absolute hidden h-[450px] w-[280px] -translate-x-[30px] -translate-y-[110px] rounded-2xl border-[10px] border-white group-hover:block"></div> */}
       <div className="absolute hidden h-[450px] w-[280px] -translate-x-[30px] -translate-y-[70px] rounded-2xl border-[10px] border-white sm:group-hover:block"></div>
       <div className="relative flex flex-col justify-center">
