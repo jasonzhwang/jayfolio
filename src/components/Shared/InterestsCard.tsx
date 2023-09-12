@@ -40,7 +40,7 @@ const InterestsCard: React.FC<InterestsCardProps> = ({
 
   const imgSrc = InterestsImg[index - 1];
   return (
-    <div className="group flex flex-col lg:min-h-[580px]" onClick={handleEmailClick}>
+    <div className="group flex min-h-[380px] flex-col lg:min-h-[580px]" onClick={handleEmailClick}>
       <div className="flex flex-col rounded-xl bg-[#F14A38] px-[20px]">
         <div className="flex min-w-[207px] pb-[26px] pt-[30px]">
           <div className="mx-auto sm:ml-0">

@@ -7,8 +7,8 @@ const InterestsSection = () => {
       <p className="mx-auto pb-[50px] text-center font-Robuck text-[64px] tracking-wider text-white">
         What I&apos;m interested
       </p>
-      <div className="mx-auto flex max-w-[1180px] flex-col gap-[10px] lg:flex-row">
-        <div className="mx-auto flex flex-col gap-[10px] sm:flex-row">
+      <div className="mx-auto flex max-w-[1180px] flex-col gap-0 sm:gap-[25px] lg:flex-row lg:gap-[10px]">
+        <div className="mx-auto flex flex-col gap-0 sm:flex-row sm:gap-[25px] lg:gap-[10px]">
           <InterestsCard
             index={1}
             advDescription="CHRACTER"
@@ -26,7 +26,7 @@ const InterestsSection = () => {
             skillSet={["UI", "UX", "Figma", "XD", "System Design"]}
           />
         </div>
-        <div className="mx-auto flex flex-col gap-[10px] sm:flex-row">
+        <div className="mx-auto flex flex-col gap-0 sm:flex-row sm:gap-[25px] lg:gap-[10px]">
           <InterestsCard
             index={3}
             advDescription="EFFICIENT"
