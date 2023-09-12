@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 export enum SocialMediaType {
   Linkedin = "linkedin",
@@ -9,9 +9,15 @@ export enum SocialMediaType {
 }
 interface SocialMediaProps {
   socialMedia: SocialMediaType;
+  wechatPopupVisible: boolean;
+  setWechatPopupVisible: (newValue: boolean) => void;
 }
 
-const SocialMedia: React.FC<SocialMediaProps> = ({ socialMedia }) => {
+const SocialMedia: React.FC<SocialMediaProps> = ({
+  socialMedia,
+  wechatPopupVisible,
+  setWechatPopupVisible,
+}) => {
   let bgColor;
   let imgSrc;
   let linkUrl: string;
@@ -45,10 +51,14 @@ const SocialMedia: React.FC<SocialMediaProps> = ({ socialMedia }) => {
   }
   return (
     <div
-      // className={`my-auto flex h-[30px] w-[30px] rounded-2xl border-[4px] border-white sm:h-[80px] sm:w-[80px] ${bgColor}`}
       className={`my-auto flex h-[50px] w-[50px] rounded-2xl border-[4px] border-white group-hover:border-[#FDED39] sm:h-[70px] sm:w-[70px] ${bgColor} sm:group-hover:h-[80px] sm:group-hover:w-[80px]`}
       onClick={() => {
-        window.location.href = linkUrl;
+        if (socialMedia === SocialMediaType.Wechat) {
+          // Toggle the visibility of the WeChat popup image
+          setWechatPopupVisible(!wechatPopupVisible);
+        } else {
+          window.location.href = linkUrl;
+        }
       }}
     >
       <img

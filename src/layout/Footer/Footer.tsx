@@ -11,7 +11,13 @@ const SocialMediaArray = [
   SocialMediaType.Wechat,
   SocialMediaType.Email,
 ];
-const Footer = () => {
+
+interface FooterProps {
+  wechatPopupVisible: boolean;
+  setWechatPopupVisible: (newValue: boolean) => void;
+}
+
+const Footer: React.FC<FooterProps> = ({ wechatPopupVisible, setWechatPopupVisible }) => {
   return (
     <footer className="flex-col bg-[#FE5943]">
       <div className="mx-auto max-w-[1210px] translate-y-[100px] rounded-2xl border-[15px] border-[#FE5943]">
@@ -29,7 +35,12 @@ const Footer = () => {
                 <div className="group relative flex" key={index}>
                   <div className="absolute left-1/2 hidden h-full w-[5px] bg-[#F14A38] group-hover:block"></div>
                   <div className="z-10 my-auto">
-                    <SocialMedia key={index} socialMedia={type} />
+                    <SocialMedia
+                      key={index}
+                      socialMedia={type}
+                      wechatPopupVisible={wechatPopupVisible}
+                      setWechatPopupVisible={setWechatPopupVisible}
+                    />
                   </div>
                 </div>
               ))}
