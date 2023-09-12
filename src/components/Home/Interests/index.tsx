@@ -23,7 +23,7 @@ const InterestsSection = () => {
             advPic="./uiux.svg"
             InterestsTitle="UI & UX Design"
             InterestsSubTitle="VARIOUS WORKS"
-            skillSet={["User Interface", "User Interaction", "Figma", "System Design"]}
+            skillSet={["UI", "UX", "Figma", "XD", "System Design"]}
           />
         </div>
         <div className="mx-auto flex flex-col gap-[10px] sm:flex-row">
@@ -35,8 +35,9 @@ const InterestsSection = () => {
             InterestsSubTitle="VARIOUS WORKS"
             skillSet={[
               "Full-Stack",
-              "MicroInterestss",
-              "NoSQL & Relational DB",
+              "NoSQL",
+              "Relational DB",
+              "Micro-services",
               "AWS",
               "Algorithms",
             ]}
@@ -47,7 +48,7 @@ const InterestsSection = () => {
             advPic="./support.svg"
             InterestsTitle="IT Support"
             InterestsSubTitle="VARIOUS WORKS"
-            skillSet={["Help Desk", "Server", "Prototyping", "ERP", "User mgmt", "Data backup"]}
+            skillSet={["Help Desk", "ERP", "Server", "Prototyping", "User mgmt", "Data backup"]}
           />
         </div>
       </div>

@@ -1,6 +1,7 @@
 import React from "react";
 import TagButton from "./TagButton";
-import SendMessage from "@/public/send-message.svg";
+// import SendMessage from "@/public/send-message.svg";
+import SendMail from "@/public/mail-send.svg";
 
 const InterestsImg = ["./flyer.png", "./uiux.png", "./coding.jpeg", "./it-support.jpeg"];
 
@@ -52,7 +53,8 @@ const InterestsCard: React.FC<InterestsCardProps> = ({
           </div>
         </div>
         <div className="mx-auto mb-[10px] flex h-[35px] w-[35px] group-hover:invisible">
-          <SendMessage className="h-full w-full text-white" />
+          {/* <SendMessage className="w-full h-full text-white" /> */}
+          <SendMail className="h-full w-full text-white" />
         </div>
       </div>
       <button className="relative mx-auto hidden -translate-y-3/4 rounded-xl border-[5px] border-[#FE5943] bg-[#FDCE40] px-[16px] py-[12px] font-Hemenix text-white group-hover:block">
