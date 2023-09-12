@@ -12,7 +12,7 @@ export const AllProjects = [
     github: "",
   },
   {
-    name: "Jobpin ResumeBuilder",
+    name: "Resume Builder",
     link: "",
     imgSrc: "./jobpin.png",
     bitbucket: "internal",
@@ -43,7 +43,7 @@ const Projects = () => {
       <div className="relative">
         <div className="mx-[15px] md:mx-[32px]">
           <div className="mx-auto flex max-w-[1180px] flex-col lg:flex-row">
-            <div className="z-10 rounded-l-2xl bg-[#F74E3B] pt-[82px] lg:pb-[79px] lg:pr-[200px]">
+            <div className="z-10 rounded-l-2xl bg-[#F74E3B] py-[50px] lg:pr-[200px]">
               <div className="flex lg:gap-[35px] lg:pl-[56px]">
                 <div className="mt-[15px]">
                   <img src="./footer-points.svg" alt="" className="hidden lg:block" />
@@ -58,12 +58,7 @@ const Projects = () => {
                     <br />
                     RECENT
                   </h2>
-                  {/* <img
-                src="./line-switcher.svg"
-                className="mx-auto pb-[24px] pt-[25px] lg:ml-0"
-                alt=""
-              /> */}
-                  <div className="mx-auto flex gap-[5px] pb-[24px] pt-[25px] lg:ml-0">
+                  <div className="flex justify-center gap-[5px] pb-[24px] pt-[25px] lg:ml-0 lg:justify-start">
                     {Array(4)
                       .fill(null)
                       .map((_, index) => (
@@ -79,14 +74,11 @@ const Projects = () => {
                         ></button>
                       ))}
                   </div>
-                  <p className="mx-auto w-[100%] text-center text-white lg:ml-0 lg:text-left ">
+                  <p className="mx-auto w-[100%] py-[20px] text-center font-Robuck text-[64px] text-[#FFD241] lg:ml-0 lg:text-left">
                     {currentProjectInfo.name}
                   </p>
                   <div className="flex">
-                    {/* <button className="mx-auto mt-[61px] bg-white px-[16px] py-[12px] text-[#FE5943] lg:ml-0">
-                  View Projects
-                </button> */}
-                    <div className="mx-auto mt-[61px] flex gap-[20px] lg:ml-0">
+                    <div className="mx-auto flex gap-[20px] lg:ml-0">
                       <button className="border-[2px] border-[#FFD241] px-[12px] py-[8px] text-[#FFD241] hover:bg-[#FFD241] hover:text-white">
                         Browser
                       </button>
@@ -100,11 +92,7 @@ const Projects = () => {
             </div>
             <div className="z-10 hidden w-[200px] rounded-r-2xl border-[4px] border-[#F14A38] bg-[#FE5943] lg:block"></div>
             <div className="z-10 flex bg-[#F74E3B] lg:relative lg:flex-1 lg:bg-[#FE5943]">
-              <div className="relative mx-auto h-[500px] w-[500px] overflow-hidden rounded-2xl border-[10px] border-white lg:absolute lg:right-0 lg:w-[626px] lg:translate-y-[35px]">
-                {/* <img src="./CrankIT.png" alt="" /> */}
-                {/* <img src="./jobpin.png" alt="" /> */}
-                {/* <img src="./TaoTalk.png" alt="" /> */}
-                {/* <img src="./jayjayStudio.png" alt="" /> */}
+              <div className="relative mx-auto h-[350px] overflow-hidden rounded-2xl border-[10px] border-white sm:h-[500px] lg:absolute lg:right-0 lg:w-[626px] lg:translate-y-[23px]">
                 <img src={currentProjectInfo.imgSrc} alt="" />
                 <div
                   className="absolute left-0 top-1/2 ml-[30px]"

@@ -28,8 +28,8 @@ const HeroSection = () => {
             Learn more
           </button>
         </div>
-        <div className="mx-auto flex h-[500px]">
-          <img src="./hero.svg" alt="" />
+        <div className="mx-auto mt-[50px] flex h-[300px] sm:h-[500px]">
+          <img src="./hero.svg" alt="" className="h-full " />
         </div>
       </div>
     </section>
