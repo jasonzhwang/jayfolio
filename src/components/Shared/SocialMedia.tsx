@@ -42,24 +42,24 @@ const SocialMedia: React.FC<SocialMediaProps> = ({
     case SocialMediaType.Wechat:
       bgColor = "bg-[#09B83E]";
       imgSrc = "./wechat.svg";
-      linkUrl = "";
       break;
     case SocialMediaType.Email:
       bgColor = "bg-[#808080]";
       imgSrc = "./email.svg";
-      linkUrl = "";
       break;
   }
   return (
     <div
       className={`my-auto flex h-[50px] w-[50px] rounded-2xl border-[4px] border-white group-hover:border-[#FDED39] sm:h-[70px] sm:w-[70px] ${bgColor} sm:group-hover:h-[80px] sm:group-hover:w-[80px]`}
-      onClick={() => {
-        if (socialMedia === SocialMediaType.Wechat) {
-          // Toggle the visibility of the WeChat popup image
-          setWechatPopupVisible(!wechatPopupVisible);
-        }
-        if (socialMedia === SocialMediaType.Email) {
-          SendEmail();
+      onClick={(event) => {
+        if (socialMedia === SocialMediaType.Wechat || socialMedia === SocialMediaType.Email) {
+          event.preventDefault();
+
+          if (socialMedia === SocialMediaType.Wechat) {
+            setWechatPopupVisible(!wechatPopupVisible);
+          } else if (socialMedia === SocialMediaType.Email) {
+            SendEmail();
+          }
         } else {
           window.location.href = linkUrl;
         }

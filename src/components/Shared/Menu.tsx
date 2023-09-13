@@ -2,7 +2,7 @@ import React from "react";
 
 const Menu = () => {
   return (
-    <ul className="my-auto hidden flex-1 justify-center gap-[30px] px-[20px] lg:flex">
+    <ul className="my-auto hidden flex-1 justify-center gap-[30px] px-[20px] xl:flex">
       <li className="font-Hemenix text-[16px] text-white hover:text-[#FDCE40]">
         <a href="#skills">SKILLS</a>
       </li>

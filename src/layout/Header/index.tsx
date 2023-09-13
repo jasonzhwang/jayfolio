@@ -1,4 +1,5 @@
 import react, { useState } from "react";
+import { signIn, signOut } from "next-auth/react";
 import { Session } from "next-auth";
 import Menu from "@/src/components/Shared/Menu";
 import Hamburger from "@/public/hamburger.svg";
@@ -56,9 +57,28 @@ const Header = ({ session }: { session: Session | null }) => {
               </div>
             </div>
             <div className="ml-auto flex gap-[5px] pr-[20px]">
-              <span className="my-auto px-[16px] py-[12px] text-xl font-black text-white">
-                LOGIN
-              </span>
+              {session !== null && session !== undefined && (
+                <div className="my-auto flex h-[50px] w-[50px] items-center justify-center rounded-full bg-white text-[32px] font-black text-[#F14A38]">
+                  {session !== null && session !== undefined
+                    ? (session.user?.name ?? "").split(" ")[0].charAt(0).toUpperCase()
+                    : ""}
+                </div>
+              )}
+              {session !== null && session !== undefined ? (
+                <span
+                  className="my-auto px-[16px] py-[12px] text-xl font-black text-white"
+                  onClick={() => signOut()}
+                >
+                  Logout
+                </span>
+              ) : (
+                <span
+                  className="my-auto px-[16px] py-[12px] text-xl font-black text-white"
+                  onClick={() => signIn()}
+                >
+                  LOGIN
+                </span>
+              )}
               {isMenuShown && (
                 <div
                   className="my-auto flex h-[30px] w-[30px] lg:hidden"
