@@ -4,31 +4,47 @@ import StudioName from "../../Shared/StudioName";
 import LeftArrow from "@/public/arrow-point-to-left.svg";
 import RightArrow from "@/public/arrow-point-to-right.svg";
 
+//browser, github, figma, bitbucke, wordpress
 export const AllProjects = [
   {
     name: "TaoTalk",
-    link: "https://taotalk.vercel.app/",
+    links: [
+      { name: "website", url: "https://taotalk.vercel.app/" },
+      { name: "github", url: "https://github.com/taodemy/taotalk" },
+      {
+        name: "figma",
+        url: "https://www.figma.com/file/HlwTWiPL1kq4pygBmjCQ1x/TaoTalk?type=design&node-id=1315-2109&mode=design&t=u1vPGJoLRs0vOY6O-0",
+      },
+    ],
     imgSrc: "./TaoTalk.png",
-    github: "",
   },
   {
     name: "Resume Builder",
-    link: "",
+    links: [
+      { name: "website", url: "https://jobpin.com.au" },
+      { name: "bitbucket", url: "#" },
+    ],
     imgSrc: "./jobpin.png",
-    bitbucket: "internal",
   },
   {
     name: "CrankIT Fitness",
-    link: "https://www.crankitfitness.com/",
+    links: [
+      { name: "website", url: "https://www.crankitfitness.com/" },
+      { name: "wordpress", url: "internal" },
+    ],
     imgSrc: "./CrankIT.png",
-    wordpress: "internal",
   },
   {
     name: "Jason's Portfolio",
-    link: "https://jayjaystudio.vercel.app/",
+    links: [
+      { name: "website", url: "https://jayjaystudio.vercel.app/" },
+      { name: "github", url: "https://github.com/jasonzhwang/jayfolio" },
+      {
+        name: "figma",
+        url: "https://www.figma.com/proto/ggF3BYJNnEwtgce2EaLn5j/JayJay-Studio?node-id=617-1768",
+      },
+    ],
     imgSrc: "./jayjayStudio.png",
-    github: "",
-    figma: "",
   },
 ];
 
@@ -69,7 +85,6 @@ const Projects = () => {
                           }`}
                           onClick={() => {
                             setCurrentProject(index);
-                            console.log(currentProject, index);
                           }}
                         ></button>
                       ))}
@@ -78,13 +93,30 @@ const Projects = () => {
                     {currentProjectInfo.name}
                   </p>
                   <div className="flex">
-                    <div className="mx-auto flex gap-[20px] lg:ml-0">
-                      <button className="border-[2px] border-[#FFD241] px-[12px] py-[8px] text-[#FFD241] hover:bg-[#FFD241] hover:text-white">
-                        Browser
-                      </button>
-                      <button className="border-[2px] border-white px-[12px] py-[8px] text-white hover:bg-white hover:text-[#F14A38]">
-                        Github
-                      </button>
+                    <div className="mx-auto flex gap-[15px] lg:ml-0">
+                      {currentProjectInfo.links.map((link) => (
+                        <a
+                          key={link.name}
+                          href={link.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className={`border-[2px] px-[12px] py-[8px] ${
+                            link.name === "website"
+                              ? "border-[#FFD241] text-[#FFD241] hover:bg-[#FFD241] hover:text-white"
+                              : link.name === "github"
+                              ? "border-white text-white hover:bg-white hover:text-[#F14A38]"
+                              : link.name === "bitbucket"
+                              ? "border-[#205081] text-[#205081] hover:bg-[#205081] hover:text-white" // Use Bitbucket color
+                              : link.name === "figma"
+                              ? "border-[#205081] text-[#205081] hover:bg-[#205081] hover:text-white" // Use Figma color
+                              : link.name === "wordpress"
+                              ? "border-[#0073AA] text-[#0073AA] hover:bg-[#0073AA] hover:text-white" // Use WordPress color
+                              : "" // Add similar conditions for other links here
+                          }`}
+                        >
+                          {link.name}
+                        </a>
+                      ))}
                     </div>
                   </div>
                 </div>
