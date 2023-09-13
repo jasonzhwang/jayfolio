@@ -8,7 +8,7 @@ import OutlineButton from "./OutlineButton";
 import AppDeveloper from "@/public/app-developer.svg";
 import WebDeveloper from "@/public/web-development.svg";
 
-export const AllExperiences = ["TaoTech", "Jobpin", "BEfoods", "GadgetGuys", "PartnerTech"];
+export const AllExperiences = ["TaoTech", "Jobpin", "BEfoods", "GadgetGuys", "EZOZ", "PartnerTech"];
 
 enum TaotechDetail {
   Company = "TaoTech",
