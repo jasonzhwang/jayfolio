@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import SendEmail from "./SendEmail";
 
 export enum SocialMediaType {
   Linkedin = "linkedin",
@@ -56,6 +57,9 @@ const SocialMedia: React.FC<SocialMediaProps> = ({
         if (socialMedia === SocialMediaType.Wechat) {
           // Toggle the visibility of the WeChat popup image
           setWechatPopupVisible(!wechatPopupVisible);
+        }
+        if (socialMedia === SocialMediaType.Email) {
+          SendEmail();
         } else {
           window.location.href = linkUrl;
         }

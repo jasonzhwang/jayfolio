@@ -1,6 +1,6 @@
 import React from "react";
 import TagButton from "./TagButton";
-// import SendMessage from "@/public/send-message.svg";
+import SendEmail from "./SendEmail";
 import SendMail from "@/public/mail-send.svg";
 
 const InterestsImg = ["./flyer.png", "./uiux.png", "./coding.jpeg", "./it-support.jpeg"];
@@ -22,25 +22,10 @@ const InterestsCard: React.FC<InterestsCardProps> = ({
   InterestsSubTitle,
   skillSet,
 }) => {
-  const receiverEmail = "jason.zhw.work@gmail.com";
-
-  const handleEmailClick = () => {
-    console.log("clicked");
-    const subject = "Your Subject Here"; // Replace with your desired email subject
-    const body = "Your email body text goes here."; // Replace with your desired email body
-
-    // Construct the mailto link
-    const mailtoLink = `mailto:${receiverEmail}?subject=${encodeURIComponent(
-      subject
-    )}&body=${encodeURIComponent(body)}`;
-
-    // Open the user's email client
-    window.location.href = mailtoLink;
-  };
-
   const imgSrc = InterestsImg[index - 1];
+
   return (
-    <div className="group flex min-h-[380px] flex-col lg:min-h-[580px]" onClick={handleEmailClick}>
+    <div className="group flex min-h-[380px] flex-col lg:min-h-[580px]" onClick={SendEmail}>
       <div className="flex flex-col rounded-xl bg-[#F14A38] px-[20px]">
         <div className="flex min-w-[207px] pb-[26px] pt-[30px]">
           <div className="mx-auto sm:ml-0">
