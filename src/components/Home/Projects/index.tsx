@@ -43,7 +43,7 @@ const Projects = () => {
       <div className="relative">
         <div className="mx-[15px] md:mx-[32px]">
           <div className="mx-auto flex max-w-[1180px] flex-col lg:flex-row">
-            <div className="z-10 rounded-l-2xl bg-[#F74E3B] py-[50px] lg:pr-[200px]">
+            <div className="z-10 rounded-t-2xl bg-[#F74E3B] py-[50px] lg:rounded-none lg:rounded-l-2xl lg:pr-[200px]">
               <div className="flex lg:gap-[35px] lg:pl-[56px]">
                 <div className="mt-[15px]">
                   <img src="./footer-points.svg" alt="" className="hidden lg:block" />
@@ -91,7 +91,7 @@ const Projects = () => {
               </div>
             </div>
             <div className="z-10 hidden w-[200px] rounded-r-2xl border-[4px] border-[#F14A38] bg-[#FE5943] lg:block"></div>
-            <div className="z-10 flex bg-[#F74E3B] lg:relative lg:flex-1 lg:bg-[#FE5943]">
+            <div className="z-10 flex rounded-b-2xl bg-[#F74E3B] lg:relative lg:flex-1 lg:bg-[#FE5943]">
               <div className="relative mx-auto h-[350px] overflow-hidden rounded-2xl border-[10px] border-white sm:h-[500px] lg:absolute lg:right-0 lg:w-[626px] lg:translate-y-[23px]">
                 <img src={currentProjectInfo.imgSrc} alt="" />
                 <div
@@ -114,14 +114,6 @@ const Projects = () => {
                 >
                   <RightArrow className="h-[20px] w-[20px] text-white" />
                 </div>
-                {/* <div className="absolute bottom-[20px] left-1/2 flex -translate-x-1/2 gap-[20px]">
-              <button className="border-[2px] border-[#FFD241] px-[12px] py-[8px] text-[#FFD241]">
-                Browser
-              </button>
-              <button className="border-[2px] border-white px-[12px] py-[8px] text-white">
-                Github
-              </button>
-            </div> */}
               </div>
             </div>
           </div>

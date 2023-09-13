@@ -29,19 +29,9 @@ const Header = ({ session }: { session: Session | null }) => {
           <Menu />
           <div className="flex flex-1">
             <div className="my-auto hidden flex-1 justify-center gap-[5px] sm:flex">
-              {/* <div className="flex h-[50px] w-[50px] rounded-full bg-[#F14A38]">
-                <img src="./linkedin.svg" className="mx-auto my-auto h-[20px]" />
-              </div>
-              <div className="flex h-[50px] w-[50px] rounded-full bg-[#F14A38]">
-                <img src="./github.svg" className="mx-auto my-auto h-[20px]" />
-              </div>
-              <div className="flex h-[50px] w-[50px] rounded-full bg-[#F14A38]">
-                <img src="./figma.svg" className="mx-auto my-auto h-[20px]" />
-              </div> */}
               <div
                 className="flex h-[50px] w-[50px] items-center justify-center rounded-full bg-[#F14A38] hover:border-[3px] hover:border-[#FDCE40] hover:bg-[#0077B5]"
                 onClick={() => {
-                  console.log("Button clicked");
                   window.location.href = "https://www.linkedin.com/in/jasonzhw/";
                 }}
               >
@@ -50,7 +40,6 @@ const Header = ({ session }: { session: Session | null }) => {
               <div
                 className="flex h-[50px] w-[50px] items-center justify-center rounded-full bg-[#F14A38] hover:border-[3px] hover:border-[#FDCE40] hover:bg-[#6e5494]"
                 onClick={() => {
-                  console.log("Button clicked");
                   window.location.href = "https://github.com/jasonzhwang";
                 }}
               >
@@ -59,7 +48,6 @@ const Header = ({ session }: { session: Session | null }) => {
               <div
                 className="flex h-[50px] w-[50px] items-center justify-center rounded-full bg-[#F14A38] hover:border-[3px] hover:border-[#FDCE40] hover:bg-[#00BEFF]"
                 onClick={() => {
-                  console.log("Button clicked");
                   window.location.href =
                     "https://www.figma.com/proto/ggF3BYJNnEwtgce2EaLn5j/JayJay-Studio?type=design&node-id=617-1768&t=HU3sLIE4qyutqLF9-0&scaling=min-zoom&page-id=0%3A1";
                 }}
@@ -98,18 +86,62 @@ const Header = ({ session }: { session: Session | null }) => {
       {isMenuShown && (
         <div className="absolute top-[110px] z-10 flex h-[500px] w-full items-center justify-center bg-white md:w-[93%] lg:hidden">
           <ul className="flex flex-col items-center gap-[50px] text-center leading-8">
-            <li className="font-Robuck text-[32px] tracking-widest text-[#F14A38]">CASES</li>
-            <li className="font-Robuck text-[32px] tracking-widest text-[#F14A38]">SKILLS</li>
-            <li className="font-Robuck text-[32px] tracking-widest text-[#F14A38]">CAREER</li>
-            <li className="font-Robuck text-[32px] tracking-widest text-[#F14A38]">BLOGS</li>
+            <li
+              className="font-Robuck text-[32px] tracking-widest text-[#F14A38]"
+              onClick={() => {
+                setIsMenuShown(false);
+              }}
+            >
+              <a href="#skills">SKILLS</a>
+            </li>
+            <li
+              className="font-Robuck text-[32px] tracking-widest text-[#F14A38]"
+              onClick={() => {
+                setIsMenuShown(false);
+              }}
+            >
+              <a href="#projects">PROJECTS</a>
+            </li>
+            <li
+              className="font-Robuck text-[32px] tracking-widest text-[#F14A38]"
+              onClick={() => {
+                setIsMenuShown(false);
+              }}
+            >
+              <a href="#experiences">CAREER</a>
+            </li>
+            <li
+              className="font-Robuck text-[32px] tracking-widest text-[#F14A38]"
+              onClick={() => {
+                setIsMenuShown(false);
+              }}
+            >
+              <a href="#interests">INTERESTS</a>
+            </li>
             <li className="flex gap-[10px]">
-              <div className="flex h-[50px] w-[50px] items-center justify-center rounded-full bg-[#0077B5]">
+              <div
+                className="flex h-[50px] w-[50px] items-center justify-center rounded-full bg-[#0077B5]"
+                onClick={() => {
+                  window.location.href = "https://www.linkedin.com/in/jasonzhw/";
+                }}
+              >
                 <Linkedin className="h-[30px] w-[30px]" />
               </div>
-              <div className="flex h-[50px] w-[50px] items-center justify-center rounded-full bg-[#6e5494]">
+              <div
+                className="flex h-[50px] w-[50px] items-center justify-center rounded-full bg-[#6e5494]"
+                onClick={() => {
+                  window.location.href = "https://github.com/jasonzhwang";
+                }}
+              >
                 <Github className="h-[30px] w-[30px]" />
               </div>
-              <div className="flex h-[50px] w-[50px] items-center justify-center rounded-full bg-[#00BEFF]">
+              <div
+                className="flex h-[50px] w-[50px] items-center justify-center rounded-full bg-[#00BEFF]"
+                onClick={() => {
+                  window.location.href =
+                    "https://www.figma.com/proto/ggF3BYJNnEwtgce2EaLn5j/JayJay-Studio?type=design&node-id=617-1768&t=HU3sLIE4qyutqLF9-0&scaling=min-zoom&page-id=0%3A1";
+                }}
+              >
                 <Figma className="h-[30px] w-[30px]" />
               </div>
             </li>

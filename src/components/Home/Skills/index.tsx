@@ -134,7 +134,7 @@ const SkillSection = () => {
       <div className="mx-auto mb-[50px] justify-center rounded-lg bg-[#F14B36]">
         {Object.keys(skillSets).map((skill, index) => (
           <button
-            className="px-[16px] py-[12px] font-Hemenix text-[16px] text-white hover:rounded-lg hover:bg-white hover:text-[#F74E3B]"
+            className="px-[16px] py-[12px] font-Hemenix text-[12px] text-white hover:rounded-lg hover:bg-white hover:text-[#F74E3B]"
             key={index}
             onClick={() => {
               setSkillSet(skill);
