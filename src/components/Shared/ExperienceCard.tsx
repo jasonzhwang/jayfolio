@@ -33,7 +33,7 @@ enum BEfoodsDetail {
 enum GadgetGuysDetail {
   Company = "Gadget Guys",
   Title = "Mobile Technician",
-  Period = "2021-2022",
+  Period = "2019-2021",
   EmploymentType = "Full-time",
   Link = "https://thegadgetguys.com.au",
 }
@@ -41,7 +41,7 @@ enum GadgetGuysDetail {
 enum EzozDetail {
   Company = "Ezoz",
   Title = "Wordpress Developer",
-  Period = "2021-2022",
+  Period = "2020-2020",
   EmploymentType = "Intern",
   Link = "https://ezoz.my",
 }
@@ -49,7 +49,7 @@ enum EzozDetail {
 enum PartnerTechDetail {
   Company = "Partner Tech",
   Title = "Hardware Technician",
-  Period = "2021-2022",
+  Period = "2014-2016",
   EmploymentType = "Part-time",
   Link = "https://www.partnertechcorp.com",
 }
