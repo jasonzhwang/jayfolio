@@ -100,7 +100,7 @@ const Projects = () => {
                       .map((_, index) => (
                         <button
                           key={index}
-                          className={`h-[4px] w-[38px] hover:bg-[#FFD241] focus:bg-[#FFD241] ${
+                          className={`h-[4px] w-[32px] hover:bg-[#FFD241] focus:bg-[#FFD241] ${
                             currentProject === index ? "bg-[#FFD241]" : "bg-white"
                           }`}
                           onClick={() => {
