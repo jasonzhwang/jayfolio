@@ -7,6 +7,26 @@ import RightArrow from "@/public/arrow-point-to-right.svg";
 //browser, github, figma, bitbucke, wordpress
 export const AllProjects = [
   {
+    name: "Taotify",
+    links: [
+      { name: "website", url: "https://app.taotify.com/" },
+      { name: "github", url: "https://github.com/taodemy/taotify" },
+      {
+        name: "figma",
+        url: "https://www.figma.com/file/aPBUNzoc2uDtxDeLtlQCoz/Taotify?type=design&node-id=335%3A132&mode=design&t=j4Y21kiwOAZIG89E-1",
+      },
+    ],
+    imgSrc: "./Taotify-app.png",
+  },
+  {
+    name: "Resume Builder",
+    links: [
+      { name: "website", url: "https://jobpin.com.au" },
+      { name: "bitbucket", url: "#" },
+    ],
+    imgSrc: "./jobpin.png",
+  },
+  {
     name: "TaoTalk",
     links: [
       { name: "website", url: "https://taotalk.vercel.app/" },
@@ -19,22 +39,6 @@ export const AllProjects = [
     imgSrc: "./TaoTalk.png",
   },
   {
-    name: "Resume Builder",
-    links: [
-      { name: "website", url: "https://jobpin.com.au" },
-      { name: "bitbucket", url: "#" },
-    ],
-    imgSrc: "./jobpin.png",
-  },
-  {
-    name: "CrankIT Fitness",
-    links: [
-      { name: "website", url: "https://www.crankitfitness.com/" },
-      { name: "wordpress", url: "internal" },
-    ],
-    imgSrc: "./CrankIT.png",
-  },
-  {
     name: "Jason's Portfolio",
     links: [
       { name: "website", url: "https://jayjaystudio.vercel.app/" },
@@ -45,6 +49,22 @@ export const AllProjects = [
       },
     ],
     imgSrc: "./jayjayStudio.png",
+  },
+  {
+    name: "CrankIT Fitness",
+    links: [
+      { name: "website", url: "https://www.crankitfitness.com/" },
+      { name: "wordpress", url: "internal" },
+    ],
+    imgSrc: "./CrankIT.png",
+  },
+  {
+    name: "TJK Capital",
+    links: [
+      { name: "website", url: "https://www.tjkcapital.com.au/" },
+      { name: "bitbucket", url: "#" },
+    ],
+    imgSrc: "./TJKCapital.png",
   },
 ];
 
@@ -75,7 +95,7 @@ const Projects = () => {
                     RECENT
                   </h2>
                   <div className="flex justify-center gap-[5px] pb-[24px] pt-[25px] lg:ml-0 lg:justify-start">
-                    {Array(4)
+                    {Array(AllProjects.length)
                       .fill(null)
                       .map((_, index) => (
                         <button

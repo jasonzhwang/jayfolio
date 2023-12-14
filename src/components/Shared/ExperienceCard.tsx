@@ -18,13 +18,13 @@ enum JobpinDetail {
   Company = "Jobpin",
   Title = "Full-Stack Developer",
   Period = "2022-2023",
-  EmploymentType = "Full-time",
+  EmploymentType = "Contract",
   Link = "https://jobpin.com.au",
 }
 
 enum BEfoodsDetail {
   Company = "B&E Foods",
-  Title = "IT support",
+  Title = "Full-Stack Developer",
   Period = "2021-2022",
   EmploymentType = "Full-time",
   Link = "https://befoodsqld.com.au",
@@ -39,8 +39,8 @@ enum GadgetGuysDetail {
 }
 
 enum EzozDetail {
-  Company = "Ezoz",
-  Title = "Wordpress Developer",
+  Company = "Easy Agency",
+  Title = "Frontend Developer",
   Period = "2020-2020",
   EmploymentType = "Intern",
   Link = "https://ezoz.my",
